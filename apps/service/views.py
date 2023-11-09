@@ -14,6 +14,6 @@ def services(request):
 
 def services_detail(request,id):
     settings = Settings.objects.latest('id')
-    service = Service.objects.get(id=id)
+    services = Service.objects.get(id=id)
     benefits_footer = Benefits.objects.all()
     return render(request, "service/service-details.html",locals())

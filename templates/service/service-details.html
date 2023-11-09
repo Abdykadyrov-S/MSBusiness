@@ -15,16 +15,16 @@
                   <div class="col-md-12">
                     <div class="banner_title_inner">
                       <div class="title">
-                        <span class="main_tit">Разработка Бизнес-планов</span>
+                        <span class="main_tit">Подробнее об услуге</span>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-12 vankine">
                     <ul class="breadcrumb m-auto">
                       <li>
-                        <a href="service.html">Наши Услуги</a>
+                        <a href="{% url 'services' %}">Наши Услуги</a>
                       </li>
-                      <li class="active">Разработка Бизнес-планов</li>
+                      <li class="active">{{services.title}}</li>
                     </ul>
                   </div>
                 </div>
@@ -43,7 +43,7 @@
                 <div class="row">
                   <div class="col-lg-8 col-md-12 pd_right_30">
                     <div class="image_box">
-                      <img src="{% static 'assets/images/portfolio/pro-details-min.png'%}" class="img-fluid w_100" alt="img" />
+                      <img src="{{services.image.url}}" class="img-fluid w_100" alt="img" />
                     </div>
                     <!---============spacing==========--->
                     <div class="pd_bottom_30"></div>
@@ -61,96 +61,16 @@
                       <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="position-relative">
                           <ul class="list_box list">
+                            {% for benefit in benefits_footer %}
                             <li>
                               <div class="d-flex align-items-center">
                                 <div class="icon trans">
                                   <i class=" fi-rr-checkbox"></i>
                                 </div>
-                                <a class="links" href="#"> Индивидуальный Подход </a>
+                                <a class="links" href="{% url 'benefits' %}"> {{benefit.title}} </a>
                               </div>
                             </li>
-                            <li>
-                              <div class="d-flex align-items-center">
-                                <div class="icon trans">
-                                  <i class=" fi-rr-checkbox"></i>
-                                </div>
-                                <a class="links" href="#"> Глубокий Анализ </a>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="d-flex align-items-center">
-                                <div class="icon trans">
-                                  <i class=" fi-rr-checkbox"></i>
-                                </div>
-                                <a class="links" href="#"> Стратегическая Ориентированность </a>
-                              </div>
-                            </li>
-                          </ul>
-                          <!---============spacing==========--->
-                          <div class="pd_bottom_30"></div>
-                          <!---============spacing==========--->
-                        </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="position-relative">
-                          <ul class="list_box list">
-                            <li>
-                              <div class="d-flex align-items-center">
-                                <div class="icon trans">
-                                  <i class=" fi-rr-checkbox"></i>
-                                </div>
-                                <a class="links" href="#"> Финансовая Экспертиза </a>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="d-flex align-items-center">
-                                <div class="icon trans">
-                                  <i class=" fi-rr-checkbox"></i>
-                                </div>
-                                <a class="links" href="#"> Сценарии и Риски</a>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="d-flex align-items-center">
-                                <div class="icon trans">
-                                  <i class=" fi-rr-checkbox"></i>
-                                </div>
-                                <a class="links" href="#"> Профессиональная Команда </a>
-                              </div>
-                            </li>
-                          </ul>
-                          <!---============spacing==========--->
-                          <div class="pd_bottom_30"></div>
-                          <!---============spacing==========--->
-                        </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="position-relative">
-                          <ul class="list_box list">
-                            <li>
-                              <div class="d-flex align-items-center">
-                                <div class="icon trans">
-                                  <i class=" fi-rr-checkbox"></i>
-                                </div>
-                                <a class="links" href="#"> Инновации и Технологии </a>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="d-flex align-items-center">
-                                <div class="icon trans">
-                                  <i class=" fi-rr-checkbox"></i>
-                                </div>
-                                <a class="links" href="#"> Точное Планирование</a>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="d-flex align-items-center">
-                                <div class="icon trans">
-                                  <i class=" fi-rr-checkbox"></i>
-                                </div>
-                                <a class="links" href="#"> Поддержка на Всех Этапах </a>
-                              </div>
-                            </li>
+                            {% endfor %}
                           </ul>
                           <!---============spacing==========--->
                           <div class="pd_bottom_30"></div>
@@ -158,19 +78,11 @@
                         </div>
                       </div>
                     </div>
-                    <div class="image_box">
-                      <img src="{% static 'assets/images/MS/T6W9kx1jxuQJnovJjhro.jpeg'%}" class="img-fluid" alt="img" />
-                    </div>
+                    
                     <!---============spacing==========--->
                     <div class="pd_bottom_30"></div>
                     <!---============spacing==========--->
-                    <div class="section_title medium type_one">
-                      <div class="title_whole">
-                        <h2 class="title"> Мониторинг и Контроль</h2>
-                      </div>
-                      <p> Разработанный бизнес-план будет служить основой для мониторинга и контроля выполнения целей. Мы регулярно оцениваем прогресс и анализируем, какие корректировки могут потребоваться для достижения целей.</p>
-                      <p> Сформулированные конкретные и измеримые цели являются критическими для вашего бизнеса, так как они помогают ориентировать действия и ресурсы компании в нужном направлении. Мы помогаем вам четко определить, какие результаты вы хотите достичь, и как измерить свой успех на пути к достижению этих целей. </p>
-                    </div>
+                    
                     <!---============spacing==========--->
                     <div class="pd_bottom_30"></div>
                     <!---============spacing==========--->
@@ -178,9 +90,9 @@
                   <div class="col-lg-4 col-md-12">
                     <div class="section_title medium type_one">
                       <div class="title_whole">
-                        <h2 class="title"> Ваша Дорожная Карта к Успеху</h2>
+                        <h2 class="title"> {{services.title}}</h2>
                       </div>
-                      <p> Бизнес-план - это документ, который служит важным инструментом в развитии и росте вашего бизнеса. Он не только определяет вашу стратегию и цели, но и позволяет вам прокладывать путь к успеху, предвидеть вызовы и возможности, и оценивать ваши ресурсы.</p>
+                      <p> {{services.descriptions}}</p>
                     </div>
                     <!---============spacing==========--->
                     <div class="pd_bottom_30"></div>
@@ -189,11 +101,6 @@
                     <!---============spacing==========--->
                     <div class="pd_bottom_30"></div>
                     <!---============spacing==========--->
-                    <div class="section_title type_one">
-                      <p> В MSBusiness, мы специализируемся на разработке бизнес-планов, которые являются индивидуальными, точными и эффективными. Наша команда опытных консультантов и аналитиков работает над тем, чтобы предоставить вам бизнес-план, который будет действенным инструментом управления вашим бизнесом.
-
-                      </p>
-                    </div>
                     <!---============spacing==========--->
                     <div class="pd_bottom_30"></div>
                     <!---============spacing==========--->

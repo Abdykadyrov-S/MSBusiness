@@ -29,6 +29,7 @@ def about(request):
 def contact(request):
     settings = Settings.objects.latest('id')
     benefits_footer = Benefits.objects.all()
+    service = Service.objects.all()
     if request.method =="POST":
         name = request.POST.get('name')
         phone = request.POST.get('phone')

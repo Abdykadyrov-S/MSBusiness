@@ -35,26 +35,34 @@
                             <!---============spacing==========--->
                             <div class="social-icons">
                                 <ul>
+                                    {% if settings.facebook %}
                                     <li>
-                                        <a href="index.html#" class="m_icon">
+                                        <a href="{{settings.facebook}}" class="m_icon">
                                             <i class="fab fa-facebook"></i>
                                         </a>
                                     </li>
+                                    {% endif %}
+                                    {% if settings.twitter %}
                                     <li>
-                                        <a href="index.html#" class="m_icon">
+                                        <a href="{{settings.twitter}}" class="m_icon">
                                             <i class="fab fa-twitter"></i>
                                         </a>
                                     </li>
+                                    {% endif %}
+                                    {% if settings.skype %}
                                     <li>
-                                        <a href="index.html#" class="m_icon">
+                                        <a href="{{settings.skype}}" class="m_icon">
                                             <i class="fab fa-skype"></i>
                                         </a>
                                     </li>
+                                    {% endif %}
+                                    {% if settings.instagram %}
                                     <li>
-                                        <a href="index.html#" class="m_icon">
+                                        <a href="{{settings.instagram}}" class="m_icon">
                                             <i class="fab fa-instagram"></i>
                                         </a>
                                     </li>
+                                    {% endif %}
                                 </ul>
                             </div>
                         </div>
