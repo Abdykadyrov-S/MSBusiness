@@ -1,0 +1,150 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+{% include 'include/header.html' %}
+        <!----==============content_all_warpper==============--->
+        <div id="wrapper_full" class="content_all_warpper">
+          <!----==============content_all_warpper==============--->
+          <!----==============page header==============--->
+          <section class="page_header_default pg_bg_cover alignment_center">
+            <div class="bakground_cover" style="background-image:url({% static 'assets/images/MS/service_bg_img.jpeg'%})"></div>
+            <div class="page_header_content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="banner_title_inner">
+                      <div class="title">
+                        <span class="main_tit">Преимущества</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 vankine">
+                    <ul class="breadcrumb m-auto">
+                      <li>
+                        <a href="{% url 'index' %}">Главная</a>
+                      </li>
+                      <li class="active">{{benefits.title}}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!----==============page header==============--->
+          <!--content start-->
+          <div id="content" class="site-content">
+            <!--content-->
+            <section class="content-section">
+              <!---============spacing==========--->
+              <div class="pd_top_90"></div>
+              <!---============spacing==========--->
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="image_box">
+                      <img src="{{benefits.image.url}}" class="img-fluid" alt="img" />
+                    </div>
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_20"></div>
+                    <!---============spacing==========--->
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pd_left_30">
+                    <!---============spacing==========--->
+                    <div class="pd_top_30"></div>
+                    <!---============spacing==========--->
+                    <div class="section_title type_one">
+                      <div class="title_whole">
+                        <h2 class="title">{{benefits.title}}</h2>
+                      </div>
+                      <p>{{benefits.descriptions}}
+
+                      </p>
+                      <!---============spacing==========--->
+                      <div class="pd_bottom_30"></div>
+                      <!---============spacing==========--->
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="position-relative">
+                          <ul class="list_box weight_500 list">
+                            <li>
+                              <div class="d-flex align-items-center">
+                                <div class="icon trans">
+                                  <i class=" fi-rs-shield-check"></i>
+                                </div>
+                                Коммуникация
+                              </div>
+                            </li>
+                            <li>
+                              <div class="d-flex align-items-center">
+                                <div class="icon trans">
+                                  <i class=" fi-rs-shield-check"></i>
+                                </div>
+                                Профессионализм
+                              </div>
+                            </li>
+                            <li>
+                              <div class="d-flex align-items-center">
+                                <div class="icon trans">
+                                  <i class=" fi-rs-shield-check"></i>
+                                </div>
+                                Творческий подхо
+                              </div>
+                            </li>
+                          </ul>
+                          <!---============spacing==========--->
+                          <div class="pd_bottom_20"></div>
+                          <!---============spacing==========--->
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="position-relative">
+                          <ul class="list_box weight_500 list">
+                            <li>
+                              <div class="d-flex align-items-center">
+                                <div class="icon trans">
+                                  <i class=" fi-rs-shield-check"></i>
+                                </div>
+                                Гибкость
+                              </div>
+                            </li>
+                            <li>
+                              <div class="d-flex align-items-center">
+                                <div class="icon trans">
+                                  <i class=" fi-rs-shield-check"></i>
+                                </div>
+                                Опыт в различных отраслях
+                              </div>
+                            </li>
+                            <li>
+                              <div class="d-flex align-items-center">
+                                <div class="icon trans">
+                                  <i class=" fi-rs-shield-check"></i>
+                                </div>
+                                Коллективный дух
+                              </div>
+                            </li>
+                          </ul>
+                            
+                          <!---============spacing==========--->
+                          <div class="pd_bottom_20"></div>
+                          <!---============spacing==========--->
+                        </div>
+                      </div>
+                    </div>
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_20"></div>
+                    <!---============spacing==========--->
+                  </div>
+                </div>
+              </div>
+              <!---============spacing==========--->
+              <div class="pd_bottom_100"></div>
+              <!---============spacing==========--->
+            </section>
+            <!--content-->
+
+          </div>
+          <!--content end-->
+          {% include 'include/footer.html' %}
+          {% endblock %}

@@ -1,0 +1,415 @@
+{% load static %}
+
+    <!--footer start-->
+    <footer class="footer style_one">
+        
+        <!---============spacing==========--->
+        <div class="pd_top_100"></div>
+        <!---============spacing==========--->
+        <!--footer content top-->
+        <section class="md_content position-relative z_99">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pd_right_70">
+                        <div class="footer_widgets_box pd_bottom_30" style="margin-top: 100px;">
+    
+                            <!---============spacing==========--->
+                            <div class="pd_bottom_35"></div>
+                            
+                            <!---============spacing==========--->
+                            <div class="pd_bottom_25"></div>
+                            <!---============spacing==========--->
+                            <div class="newsteller_simple button_style_one">
+                                <div class="input_group">
+                                    <form method="post">
+                                        <div class="mc4wp-form-fields">
+                                            <input type="email" name="EMAIL" placeholder="Ваш Email Адресс"
+                                                required="">
+                                            <input type="submit" value="Зарегистрироваться">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!---============spacing==========--->
+                            <div class="pd_bottom_25"></div>
+                            <!---============spacing==========--->
+                            <div class="social-icons">
+                                <ul>
+                                    <li>
+                                        <a href="index.html#" class="m_icon">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#" class="m_icon">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#" class="m_icon">
+                                            <i class="fab fa-skype"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#" class="m_icon">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer_widgets_box pd_bottom_30">
+                                    <div class="fwidget_title">
+                                        <h2 class="title color_white"> Услуги</h2>
+                                        <!---============spacing==========--->
+                                        <div class="pd_bottom_25"></div>
+                                        <!---============spacing==========--->
+                                    </div>
+                                    <div class="position-relative">
+                                        <ul class="list_box list">
+                                            {% for service in service %}
+                                            <li>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="icon trans">
+                                                        <i class="fi-rr-arrow-small-right color_white"></i>
+                                                    </div>
+                                                    <a class="links color_white" href="{% url 'services' %}">
+                                                        {{ service.title }}
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer_widgets_box pd_bottom_30">
+    
+                                    <div class="fwidget_title">
+                                        <h2 class="title color_white"> Другие Страницы </h2>
+                                        <!---============spacing==========--->
+                                        <div class="pd_bottom_25"></div>
+                                        <!---============spacing==========--->
+                                    </div>
+    
+                                    <div class="position-relative">
+                                        <ul class="list_box list">
+                                            <li>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="icon trans">
+                                                        <i class="fi-rr-arrow-small-right color_white"></i>
+                                                    </div>
+                                                    <a class="links color_white" href="{% url 'benefits' %}">
+                                                        Преимущества
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="icon trans">
+                                                        <i class="fi-rr-arrow-small-right color_white"></i>
+                                                    </div>
+                                                    <a class="links color_white" href="{% url 'contact' %}">
+                                                        Оставить отзыв
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="icon trans">
+                                                        <i class="fi-rr-arrow-small-right color_white"></i>
+                                                    </div>
+                                                    <a class="links color_white" href="{% url 'news' %}">
+                                                        Новости И Блог
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="icon trans">
+                                                        <i class="fi-rr-arrow-small-right color_white"></i>
+                                                    </div>
+                                                    <a class="links color_white" href="{% url 'projects' %}">
+                                                        Наши проекты
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="icon trans">
+                                                        <i class="fi-rr-arrow-small-right color_white"></i>
+                                                    </div>
+                                                    <a class="links color_white" href="{% url 'news' %}">
+                                                        Новости
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="icon trans">
+                                                        <i class="fi-rr-arrow-small-right color_white"></i>
+                                                    </div>
+                                                    <a class="links color_white" href="{% url 'index' %}">
+                                                        Главная страница
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer_widgets_box pd_bottom_30">
+                                    <div class="fwidget_title">
+                                        <h2 class="title color_white"> Преимущества</h2>
+                                        <!---============spacing==========--->
+                                        <div class="pd_bottom_25"></div>
+                                        <!---============spacing==========--->
+                                    </div>
+                                    <div class="position-relative">
+                                        <ul class="list_box list">
+                                            {% for benefit in benefits_footer %}
+                                            <li>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="icon trans">
+                                                        <i class="fi-rr-arrow-small-right color_white"></i>
+                                                    </div>
+                                                    <a class="links color_white" href="{% url 'benefits' %}">
+                                                        {{benefit.title}}
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            {% endfor %}
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                    <!-- <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="footer_widgets_box pd_bottom_30">
+                            <div class="fwidget_title">
+                                <h2 class="title color_white"> Галлерея </h2>
+                                <-============spacing==========--->
+                                <!-- <div class="pd_bottom_25"></div> -->
+                                <!---============spacing==========--->
+                            <!-- </div>
+                            <div class="g_box d-flex">
+                                <a class="trans" href="index.html#">
+                                    <img src="{% static 'assets/images/portfolio/project-1-min.png' %}" alt="img" class="img-fluid">
+                                    <svg class="trans" width="55" height="55" viewBox="0 0 55 55" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28" cy="27" r="20" fill="white"></circle>
+                                        <circle cx="27.5" cy="27.5" r="27.5" fill="white" fill-opacity="0.1">
+                                        </circle>
+                                        <path d="M22 33.25L33.25 22M33.25 22H24.8125M33.25 22V30.4375" stroke="#2D947A"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                                <a class="trans" href="index.html#">
+                                    <img src="{% static 'assets/images/portfolio/project-2-min.png' %}" alt="img" class="img-fluid">
+                                    <svg class="trans" width="55" height="55" viewBox="0 0 55 55" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28" cy="27" r="20" fill="white"></circle>
+                                        <circle cx="27.5" cy="27.5" r="27.5" fill="white" fill-opacity="0.1">
+                                        </circle>
+                                        <path d="M22 33.25L33.25 22M33.25 22H24.8125M33.25 22V30.4375" stroke="#2D947A"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                                <a class="trans" href="index.html#">
+                                    <img src="{% static 'assets/images/portfolio/project-3-min.png' %}" alt="img" class="img-fluid">
+                                    <svg class="trans" width="55" height="55" viewBox="0 0 55 55" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28" cy="27" r="20" fill="white"></circle>
+                                        <circle cx="27.5" cy="27.5" r="27.5" fill="white" fill-opacity="0.1">
+                                        </circle>
+                                        <path d="M22 33.25L33.25 22M33.25 22H24.8125M33.25 22V30.4375" stroke="#2D947A"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                                <a class="trans" href="index.html#">
+                                    <img src="{% static 'assets/images/portfolio/project-4-min.png' %}" alt="img" class="img-fluid">
+                                    <svg class="trans" width="55" height="55" viewBox="0 0 55 55" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28" cy="27" r="20" fill="white"></circle>
+                                        <circle cx="27.5" cy="27.5" r="27.5" fill="white" fill-opacity="0.1">
+                                        </circle>
+                                        <path d="M22 33.25L33.25 22M33.25 22H24.8125M33.25 22V30.4375" stroke="#2D947A"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                                <a class="trans" href="index.html#">
+                                    <img src="{% static 'assets/images/portfolio/project-5-min.png' %}" alt="img" class="img-fluid">
+                                    <svg class="trans" width="55" height="55" viewBox="0 0 55 55" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28" cy="27" r="20" fill="white"></circle>
+                                        <circle cx="27.5" cy="27.5" r="27.5" fill="white" fill-opacity="0.1">
+                                        </circle>
+                                        <path d="M22 33.25L33.25 22M33.25 22H24.8125M33.25 22V30.4375" stroke="#2D947A"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                                <a class="trans" href="index.html#">
+                                    <img src="{% static 'assets/images/portfolio/project-6-min.png' %}" alt="img" class="img-fluid">
+                                    <svg class="trans" width="55" height="55" viewBox="0 0 55 55" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28" cy="27" r="20" fill="white"></circle>
+                                        <circle cx="27.5" cy="27.5" r="27.5" fill="white" fill-opacity="0.1">
+                                        </circle>
+                                        <path d="M22 33.25L33.25 22M33.25 22H24.8125M33.25 22V30.4375" stroke="#2D947A"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                                <a class="trans" href="index.html#">
+                                    <img src="{% static 'assets/images/portfolio/project-7-min.png' %}" alt="img" class="img-fluid">
+                                    <svg class="trans" width="55" height="55" viewBox="0 0 55 55" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28" cy="27" r="20" fill="white"></circle>
+                                        <circle cx="27.5" cy="27.5" r="27.5" fill="white" fill-opacity="0.1">
+                                        </circle>
+                                        <path d="M22 33.25L33.25 22M33.25 22H24.8125M33.25 22V30.4375" stroke="#2D947A"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                                <a class="trans" href="index.html#">
+                                    <img src="{% static 'assets/images/portfolio/project-8-min.png' %}" alt="img" class="img-fluid">
+                                    <svg class="trans" width="55" height="55" viewBox="0 0 55 55" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28" cy="27" r="20" fill="white"></circle>
+                                        <circle cx="27.5" cy="27.5" r="27.5" fill="white" fill-opacity="0.1">
+                                        </circle>
+                                        <path d="M22 33.25L33.25 22M33.25 22H24.8125M33.25 22V30.4375" stroke="#2D947A"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                                <a class="trans" href="index.html#">
+                                    <img src="{% static 'assets/images/portfolio/project-9-min.png' %}" alt="img" class="img-fluid">
+                                    <svg class="trans" width="55" height="55" viewBox="0 0 55 55" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="28" cy="27" r="20" fill="white"></circle>
+                                        <circle cx="27.5" cy="27.5" r="27.5" fill="white" fill-opacity="0.1">
+                                        </circle>
+                                        <path d="M22 33.25L33.25 22M33.25 22H24.8125M33.25 22V30.4375" stroke="#2D947A"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <!---============spacing==========--->
+            <div class="pd_bottom_50"></div>
+            <!---============spacing==========--->
+        </section>
+        <section class="mottom_content  position-relative z_99">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="position-relative">
+                            <ul class="list_box linline">
+                                <li>
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon trans">
+                                            <img src="{% static 'assets/images/shield.svg' %}" class="img-fluid" alt="img" />
+                                        </div>
+                                        <a class="links color_white" href="index.html#">
+                                            Copyright 2023, MSBusiness. All Rights Reserved
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 text-md-end">
+                        <div class="position-relative">
+                            <ul class="list_box linline">
+                                <li>
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon trans">
+                                            <i class=" fi-rr-clock"></i>
+                                        </div>
+                                        <a class="links color_white" href="index.html#">
+                                            График работы: Вс-понедельник, с 09:00 до 17:00.
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!---============spacing==========--->
+        <div class="pd_bottom_50"></div>
+        <!---============spacing==========--->
+       
+    </footer>
+    <!--footer  end-->
+    <!----==============content_all_warpper==============--->
+    </div>
+    <!----==============content_all_warpper end==============--->
+    <!----==============mobile_menu_box ==============--->
+    <div class="mobile_menu_box">
+        <div class="menu-backdrop"></div>
+        <nav class="menu-box scrollbarcolor">
+            <div class="close-btn"><i class="fi-rr-cross"></i></div>
+            <form role="search" method="get" action="index.html#">
+                <input type="search" class="search" placeholder="Поиск..." value="" name="s" title="Search" />
+                <button type="submit" class="sch_btn"> <i class="fa fa-search"></i></button>
+            </form>
+            <div class="menu-outer">
+                <div class="navigation_menu">
+                    <ul class="navbar_nav getmobilemenu">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="mobile-header-info-wrap">
+                <div class="single-mobile-header-info">
+                    <a href="tel:9806071234" class="cnt"><i class="fi-rs-headphones"></i>+996-777-777-777</a>
+                </div>
+
+                <div class="single-mobile-header-info cont_over">
+                    <a href="mailto:sendmail@example.com" class="cnt"><i
+                            class="fi-rs-envelope"></i>mailbox.msbusiness@gmail.com</a>
+                </div>
+                <div class="single-mobile-header-info">
+                    <a href="contact.html" class="theme_btn tp_one">Контакты</a>
+                </div>
+                <div class="single-mobile-header-info">
+                    <a href="index.html#" class="theme_btn">Service</a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+    <!----==============mobile_menu_box end==============--->
+    <!----==============search-popup==============--->
+    <div class="search-popup">
+        <div class="close-search zoom-in-zoom-out"><i class="fa fa-times"></i></div>
+        <div class="popup-inner">
+            <div class="overlay-layer"></div>
+            <div class="search-form">
+                <fieldset>
+                    <form role="search" method="get" action="#index.html">
+                        <input type="search" class="search" placeholder="Поиск..." value="" name="s" title="Search" />
+                        <button type="submit" class="sch_btn"> <i class="fi-rs-search"></i></button>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <!----==============search-popup end==============--->

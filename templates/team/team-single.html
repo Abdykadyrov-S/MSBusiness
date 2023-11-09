@@ -1,0 +1,221 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+{% include 'include/header.html' %}
+            <!----==============content_all_warpper==============--->
+            <div id="wrapper_full" class="content_all_warpper">
+                <!----==============content_all_warpper==============--->
+                <!----==============page header==============--->
+                <section class="page_header_default pg_bg_cover alignment_center">
+                    <div class="bakground_cover" style="background-image:url({% static 'assets/images/page-image-1-min.jpg'%})"></div>
+                    <div class="page_header_content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="banner_title_inner">
+                                        <div class="title">
+                                            <span class="main_tit">Подробнее об участнике</span> </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 vankine">
+                                    <ul class="breadcrumb m-auto">
+                                        <li><a href="{% url 'index' %}">Главная</a> </li>
+                                        <li class="active">Подробнее об участнике</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!----==============page header==============--->
+                <!--content start-->
+                <div id="content" class="site-content">
+                    <!---team-section-->
+                    <section class="team-section-one">
+                        <!---============spacing==========--->
+                        <div class="pd_top_90"></div>
+                        <!---============spacing==========--->
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-5 col-md-12">
+                                    <div class="image">
+                                        <img src="{{team.image.url}}" class="img-fluid" alt="img" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12 pd_left_60">
+                                    <div class="section_title type_one">
+                                        <div class="title_whole">
+                                            <h2 class="title"> {{team.name}}
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_10"></div>
+                                    <!---============spacing==========--->
+                                    <div class="section_title type_one">
+                                        <h4 class="sm_title"> {{team.job}}
+                                        </h4>
+                                        <p class="pd_top_0"> {{team.descriptions}}</p>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_40"></div>
+                                    <!---============spacing==========--->
+                                    <div
+                                        class="box bg_light_1 pd_top_50 pd_bottom_50 pd_left_50 pd_right_50 md_pd_left_15 md_pd_right_15">
+                                        <div class="progress_bar">
+                                            <div class="d-flex align-items-center">
+                                                <h6 class="title_no_a_18">Разработка</h6>
+                                                <div> <span class="count">79</span>%</div>
+                                            </div>
+                                            <div class="bar">
+                                                <div class="bar-inner count-bar counted" data-percent="79%"
+                                                    style="width: 79%;"></div>
+                                            </div>
+                                        </div>
+                                        <!---============spacing==========--->
+                                        <div class="pd_bottom_20"></div>
+                                        <!---============spacing==========--->
+                                        <div class="progress_bar">
+                                            <div class="d-flex align-items-center">
+                                                <h6 class="title_no_a_18">Банковское дело и транзакции</h6>
+                                                <div> <span class="count">93</span>%</div>
+                                            </div>
+                                            <div class="bar">
+                                                <div class="bar-inner count-bar counted" data-percent="93%"
+                                                    style="width: 93%;"></div>
+                                            </div>
+                                        </div>
+                                        <!---============spacing==========--->
+                                        <div class="pd_bottom_20"></div>
+                                        <!---============spacing==========--->
+                                        <div class="progress_bar">
+                                            <div class="d-flex align-items-center">
+                                                <h6 class="title_no_a_18">Коммуникация</h6>
+                                                <div> <span class="count">65</span>%</div>
+                                            </div>
+                                            <div class="bar">
+                                                <div class="bar-inner count-bar counted" data-percent="65%"
+                                                    style="width: 65%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!---team-section-->
+                    <!---team-section-->
+                    <section class="team-section-two">
+                        <!---============spacing==========--->
+                        <div class="pd_top_90"></div>
+                        <!---============spacing==========--->
+                        <div class="container">
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="section_title type_one">
+
+                                        <div class="title_whole">
+                                            <h2 class="title"> Квалификация и Опыт</h2>
+                                        </div>
+                                        <p>Наши сотрудники - это не просто профессионалы, это эксперты в своей области. Мы ценим их уровень квалификации и богатый опыт, который они приносят в нашу команду. Каждый из наших специалистов обладает впечатляющими академическими и практическими знаниями, что позволяет нам предоставлять вам консультации и решения высочайшего уровня.</p>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_30"></div>
+                                    <!---============spacing==========--->
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="position-relative">
+                                                <ul class="list_box list">
+                                                    <li>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="icon trans">
+                                                                <i class=" flaticon-check-mark"></i></div>
+                                                            <a class="links" href="team-detail.html#">                                          
+                                                                Развитие бизнеса</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="icon trans">
+                                                                <i class=" flaticon-check-mark"></i></div>
+                                                            <a class="links" href="team-detail.html#">
+                                                                Маркетинговый анализ </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="icon trans">
+                                                                <i class=" flaticon-check-mark"></i></div>
+                                                            <a class="links" href="team-detail.html#">                                                
+                                                                Цифровые решения </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!---============spacing==========--->
+                                            <div class="pd_bottom_20"></div>
+                                            <!---============spacing==========--->
+                                        </div>
+                                        <div class="col">
+                                            <div class="position-relative">
+                                                <ul class="list_box list">
+                                                    <li>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="icon trans">
+                                                                <i class=" flaticon-check-mark"></i></div>
+                                                            <a class="links" href="team-detail.html#">                                                
+                                                                Развитие бизнеса </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="icon trans">
+                                                                <i class=" flaticon-check-mark"></i></div>
+                                                            <a class="links" href="team-detail.html#">
+                                                                Маркетинговый анализ </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="icon trans">
+                                                                <i class=" flaticon-check-mark"></i></div>
+                                                            <a class="links" href="team-detail.html#">
+                                                                Цифровые решения </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!---============spacing==========--->
+                                            <div class="pd_bottom_20"></div>
+                                            <!---============spacing==========--->
+                                        </div>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_10"></div>
+                                    <!---============spacing==========--->
+                                    <div class="theme_btn_all">
+                                        <a href="team-detail.html#" class="theme_btn big rotate">
+                                            Связаться с нами 
+                                       </a></div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_20"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="image">
+                                        <img src="{% static 'assets/images/an-1-min.png'%}" class="img-fluid" alt="img" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---============spacing==========--->
+                        <div class="pd_bottom_90"></div>
+                        <!---============spacing==========--->
+                    </section>
+                    <!---team-section-->
+
+                </div>
+                <!--content end-->
+                {% include 'include/footer.html' %}
+                {% endblock %}

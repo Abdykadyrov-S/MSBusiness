@@ -1,0 +1,83 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+{% include 'include/header.html' %}
+
+        <!----==============content_all_warpper==============--->
+        <div id="wrapper_full" class="content_all_warpper">
+          <!----==============content_all_warpper==============--->
+          <!----==============page header==============--->
+          <section class="page_header_default pg_bg_cover alignment_center">
+            <div class="bakground_cover" style="background-image:url({% static 'assets/images/page-image-1-min.jpg'%})"></div>
+            <div class="page_header_content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="banner_title_inner">
+                      <div class="title">
+                        <span class="main_tit">Новости</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 vankine">
+                    <ul class="breadcrumb m-auto">
+                      <li>
+                        <a href="blog-style-2.html#">Home</a>
+                      </li>
+                      <li class="active">Blog Style 2</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!----==============page header==============--->
+          <!--content start-->
+          <div id="content" class="site-content">
+            <section class="blog_post position-relative">
+                   <!---============spacing==========--->
+            <div class="pd_top_90"></div>
+            <!---============spacing==========--->
+                <div class="container">
+                    <div class="row">
+                        {% for new in news %}
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                          <div class="blog_box type_two trans hover_1_get">
+                            <div class="blog_inner trans">
+                              <div class="image_box trans hover_1">
+                                <a href="{% url 'news_detail' new.id %}">
+                                  <img src="{{new.image.url}}" class="img-fluid" alt="img" />
+                                </a>
+                                <div class="oh ho_1"></div>
+                                <div class="oh ho_2"></div>
+                                <div class="oh ho_3"></div>
+                                <div class="oh ho_4"></div>
+                                <span class="date_tm">
+                                  <i class="fi-rr-calendar"></i>
+                                  <time class="date published" datetime="2023-01-03T10:03:20+00:00">{{new.create}}</time>
+                                </span>
+                              </div>
+                              <div class="content">
+                                <h4 class="title_22">
+                                  <a href="{% url 'news_detail' new.id %}">{{new.title}}</a>
+                                </h4>
+                                <p class="descs"> {{new.descriptions |truncatewords:24}}</p>
+                                <div class="bottn_flex">
+                                  <a href="{% url 'news_detail' new.id %}" class="rd_more">Read More <i class="fi-rr-arrow-small-right"></i>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        {% endfor %}
+                      </div>
+                </div>
+                      <!---============spacing==========--->
+            <div class="pd_bottom_70"></div>
+            <!---============spacing==========--->
+              </section>
+          </div>
+          <!--content end-->
+          {% include 'include/footer.html' %}
+          {% endblock %}

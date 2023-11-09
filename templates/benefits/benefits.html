@@ -1,0 +1,96 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+{% include 'include/header.html' %}
+            <!----==============content_all_warpper==============--->
+            <div id="wrapper_full" class="content_all_warpper">
+                <!----==============content_all_warpper==============--->
+                <!----==============page header==============--->
+                <section class="page_header_default pg_bg_cover alignment_center">
+                    <div class="bakground_cover" style="background-image:url({% static 'assets/images/page-image-1-min.jpg'%})"></div>
+                    <div class="page_header_content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="banner_title_inner">
+                                        <div class="title">
+                                            <span class="main_tit">Преимущества</span> </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 vankine">
+                                    <ul class="breadcrumb m-auto">
+                                        <li><a href="index.html">Главная</a> </li>
+                                        <li class="">Преимущества</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!----==============page header==============--->
+                <!--content start-->
+                <div id="content" class="site-content">
+                     <!---service-->
+                     <section class="service-section-one">
+                        <!---============spacing==========--->
+                        <div class="pd_top_90"></div>
+                        <!---============spacing==========--->
+                        <div class="container">
+                            <div class="row align-items-end">
+                                <div class="col-lg-6">
+                                    <div class="section_title type_one">
+                                        <div class="title_whole">
+                                            <h2 class="title"> Широкий Спектр Консалтинговых Услуг </h2>
+                                        </div>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_20"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                                <div class="col-lg-6">
+                                    <p class="mr_bottom_10">В MSBusiness мы предлагаем разнообразные консалтинговые услуги, спроектированные для того, чтобы удовлетворить все ваши потребности и бизнес-вопросы. Наш разносторонний спектр услуг помогает вам преодолевать вызовы и достигать успеха в разных аспектах вашего бизнеса.</p>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_20"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                            </div>
+                            <!---============spacing==========--->
+                            <div class="pd_bottom_20"></div>
+                            <!---============spacing==========--->
+                            <div class="service_post position-relative">
+                                <div class="row">
+                                    {% for benefit in benefits %}
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                        <div class="service_box type_seven trans">
+                                            <div class="content d-flex align-items-center bg_light_1">
+                                                <img src="{{benefit.image.url}}" class="img-fluid"
+                                                    alt="service" />
+                                                <div class="left">
+                                                    <div class="title_26">
+                                                        <a href="{% url 'benefits_detail' benefit.id %}">
+                                                            {{benefit.title}}
+                                                        </a>
+                                                    </div>
+                                                    <p class="trans">
+                                                        {{benefit.title |truncatewords:15}}
+                                                    </p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+    
+                            </div>
+                        </div>
+
+                        <!---============spacing==========--->
+                        <div class="pd_bottom_60"></div>
+                        <!---============spacing==========--->
+                    </section>
+                    <!---service end-->
+                </div>
+                <!--content end-->
+                {% include 'include/footer.html' %}
+                {% endblock %}

@@ -1,0 +1,183 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+{% include 'include/header.html' %}
+
+            <!----==============content_all_warpper==============--->
+            <div id="wrapper_full" class="content_all_warpper">
+                <!----==============content_all_warpper==============--->
+                <!----==============page header==============--->
+                <section class="page_header_default pg_bg_cover alignment_center">
+                    <div class="bakground_cover" style="background-image:url({% static 'assets/images/page-image-1-min.jpg'%})"></div>
+                    <div class="page_header_content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="banner_title_inner">
+                                        <div class="title">
+                                            <span class="main_tit">Контакты</span> </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 vankine">
+                                    <ul class="breadcrumb m-auto">
+                                        <li><a href="{% url 'index' %}">Главная</a> </li>
+                                        <li class="active">Контакты</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!----==============page header==============--->
+                <!--content start-->
+                <div id="content" class="site-content">
+                    <!---contact-->
+                    <section class="contact-section">
+                        <!---============spacing==========--->
+                        <div class="pd_top_80"></div>
+                        <!---============spacing==========--->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="contact_box_content">
+                                        <div class="icon trans">
+                                            <img src="{% static 'assets/images/cont-1.png'%}" alt="img" class="img-fluid">
+                                        </div>
+                                        <div class="contact-infor">
+                                            <h6 class="title_no_a_24"> Локация</h6>
+                                            <span>{{settings.location}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_30"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="contact_box_content">
+                                        <div class="icon trans">
+                                            <img src="{% static 'assets/images/cont-2.png'%}" alt="img" class="img-fluid">
+                                        </div>
+                                        <div class="contact-infor">
+                                            <h6 class="title_no_a_24">Email</h6>
+                                            <a href="mailto:support@gmail.com">{{settings.email}}
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_30"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="contact_box_content">
+                                        <div class="icon trans">
+                                            <img src="{% static 'assets/images/cont-3.png'%}" alt="img" class="img-fluid">
+                                        </div>
+                                        <div class="contact-infor">
+                                            <h6 class="title_no_a_24">Тел. Номер</h6>
+                                            <a href="tel:{{settings.phone}}">{{settings.phone}}
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_30"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                            </div>
+                        </div>
+                        <!---============spacing==========--->
+                        <div class="pd_bottom_40"></div>
+                        <!---============spacing==========--->
+                    </section>
+                    <!---contact end-->
+                    <!--map-->
+                   
+                    <!--map-->
+                    <!--form-->
+                    <section class="form-section bg_light_1 position-relative">
+                        <!---============spacing==========--->
+                        <div class="pd_top_90"></div>
+                        <!---============spacing==========--->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="section_title type_one">
+                                        <h4 class="sm_title"> Связаться</h4>
+                                        <div class="title_whole">
+                                            <h2 class="title"> Нужна Помощь?</h2>
+                                        </div>
+
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_40"></div>
+                                    <!---============spacing==========--->
+                                    <div class="social-icons">
+                                        <ul style="margin-left: 70px;">
+                                            <li><a href="contact.html#" class="m_icon"> <i class="fab fa-whatsapp"></i>
+                                                </a></li>
+                                            <li><a href="contact.html#" class="m_icon"> <i class="fab fa-twitter"></i>
+                                                </a></li>
+                                            <li><a href="contact.html#" class="m_icon"> <i class="fab fa-telegram"></i>
+                                                </a></li>
+                                            <li><a href="contact.html#" class="m_icon"> <i class="fab fa-instagram"></i>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_20"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                                <div class="col-lg-8 col-md-12">
+                                    <section class="contact_form_box_all">
+                                        <div class="contact_form_shortcode">
+                                            <form method="post">
+                                                {% csrf_token %}
+                                                <div class="messages"></div>
+                                                <div class="controls">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="form-group">
+                                                                <input type="text" name="name" placeholder="ФИО *" required="required" data-error="Enter Your Name">
+                                                                <div class="help-block with-errors"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12">
+                                                            <div class="form-group">
+                                                                <input type="text" name="phone" required="required" placeholder="Phone" data-error="Phone">
+                                                                <div class="help-block with-errors"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <div class="form-group">
+                                                                <input type="text" name="cause" required="required" placeholder=" Причина  (необязательно)">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <div class="form-group">
+                                                                <textarea name="message" placeholder="Дополнительная информация " rows="3" required="required" data-error="Please, leave us a message."></textarea>
+                                                                <div class="help-block with-errors"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <div class="form-group mg_top apbtn">
+                                                                <button class="theme_btn" type="submit">Отправить</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                         </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <!---============spacing==========--->
+                        <div class="pd_bottom_90"></div>
+                        <!---============spacing==========--->
+                    </section>
+                    <!--form-->
+                </div>
+                <!--content end-->
+                {% include 'include/footer.html' %}
+                {% endblock %}

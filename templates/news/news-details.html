@@ -1,0 +1,95 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+{% include 'include/header.html' %}
+
+        <!----==============content_all_warpper==============--->
+        <div id="wrapper_full" class="content_all_warpper">
+          <!----==============content_all_warpper==============--->
+          <!----==============page header==============--->
+          <section class="page_header_default pg_bg_cover alignment_center">
+            <div class="bakground_cover" style="background-image:url({% static 'assets/images/page-image-1-min.jpg'%})"></div>
+            <div class="page_header_content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="banner_title_inner">
+                      <div class="title">
+                        <span class="main_tit">Разработка Бизнес-планов</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 vankine">
+                    <ul class="breadcrumb m-auto">
+                      <li>
+                        <a href="service.html">Наши Услуги</a>
+                      </li>
+                      <li class="active">Разработка Бизнес-планов</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!----==============page header==============--->
+          <!--content start-->
+          <div id="content" class="site-content">
+            <!---portfolio-->
+            <section class="portfolio-dtail-section">
+              <!---============spacing==========--->
+              <div class="pd_top_90"></div>
+              <!---============spacing==========--->
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-8 col-md-12 pd_right_30">
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+                    
+                    <div class="image_box">
+                      <img src="{{news.image.url}}" class="img-fluid" alt="img" />
+                    </div>
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+                    <div class="section_title medium type_one">
+                      <div class="title_whole">
+                        <h2 class="title"> {{news.create}}</h2>
+                      </div>
+                    </div>
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+                  </div>
+                  <div class="col-lg-4 col-md-12">
+                    <div class="section_title medium type_one">
+                      <div class="title_whole">
+                        <h2 class="title"> {{news.title}}</h2>
+                      </div>
+                      <p> {{news.descriptions}}</p>
+                    </div>
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+                
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+                  </div>
+                </div>
+              </div>
+              <!---============spacing==========--->
+              <div class="pd_bottom_60"></div>
+              <!---============spacing==========--->
+            </section>
+            <!---slider end-->
+          </div>
+          <!--content end-->
+          {% include 'include/footer.html' %}
+          {% endblock %}

@@ -1,0 +1,93 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>MSBusiness</title>
+    <!-- Fav Icon -->
+    <link rel="icon" href="{{settings.logo.url}}" type="image/x-icon">
+    <!-- Fav Icon -->
+    <!-- Googel Fonts -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=DM+Sans%3A400%2C400i%2C500%2C500i%2C700%2C700i&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
+    <!-- Googel Fonts -->
+    <!-- Plugins -->
+    <link rel='stylesheet' href='{% static 'assets/css/plugins/bootstrap.min.css'%}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{% static 'assets/css/plugins/animate.min.css'%}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{% static 'assets/css/plugins/slick.css'%}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{% static 'assets/css/plugins/select.min.css'%}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{% static 'assets/css/plugins/owl.css'%}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{% static 'assets/css/plugins/jquery.fancybox.min.css'%}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{% static 'assets/css/plugins/rangeslider.css'%}' type='text/css' media='all' />
+    <!-- Plugins -->
+    <!-- Vankine Styles -->
+    <link rel='stylesheet' href='{% static 'assets/css/global-settings.css'%}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{% static 'assets/css/theme.css'%}' type='text/css' media='all' />
+    <!-- Vankine Styles -->
+    <!-- Icon Styles -->
+    <link rel='stylesheet' href='{% static 'assets/css/plugins/uicons-regular-rounded.css'%}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{% static 'assets/css/plugins/uicons-regular-straight.css'%}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{% static 'assets/css/plugins/font-awesome.min.css'%}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{% static 'assets/css/plugins/flaticon_vankine.css'%}' type='text/css' media='all' />
+    <!-- Icon Styles -->
+</head>
+
+<body class="theme-vankine scrollbarcolor">
+    <!----=============page_wapper=============---->
+    <div id="page" class="page_wapper hfeed site">
+        <!----=============page_wapper=============---->
+        <!----=============Preloader=============---->
+        <div class="loader-wrap">
+            <div class="preloader">
+                <div class="preloader-close"><i class="fi-rr-cross"></i></div>
+            </div>
+            <div class="layer"> </div>
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+            </div>
+        </div>
+        <!----=============Preloader end=============---->
+
+{% block content %}
+
+{% endblock %}
+
+            <!-- Back to top with progress indicator-->
+    <div class="prgoress_indicator">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!----=============page_wapper end=============---->
+    </div>
+    <!----=============page_wapper end=============---->
+
+    <!----=================Script================---->
+    <script type='text/javascript' src='{% static 'assets/js/plugins/jquery.min.js'%}'></script>
+    <script type='text/javascript' src='{% static 'assets/js/plugins/bootstrap.bundle.min.js'%}'></script>
+    <script type='text/javascript' src='{% static 'assets/js/plugins/appear.js'%}'></script>
+    <script type='text/javascript' src='{% static 'assets/js/plugins/TweenMax.min.js'%}'></script>
+    <script type='text/javascript' src='{% static 'assets/js/plugins/waypoints.js'%}'></script>
+    <script type='text/javascript' src='{% static 'assets/js/plugins/select.min.js'%}'></script>
+    <script type='text/javascript' src='{% static 'assets/js/plugins/jquery.fancybox.js'%}'></script>
+    <script type='text/javascript' src='{% static 'assets/js/plugins/isotope.min.js'%}'></script>
+    <script type='text/javascript' src='{% static 'assets/js/plugins/owl.js'%}'></script>
+    <script type='text/javascript' src='{% static 'assets/js/plugins/sharer.js'%}'></script>
+    <script type='text/javascript' src='{% static 'assets/js/plugins/rangeslider.min.js'%}'></script>
+    <script type='text/javascript' src='{% static 'assets/js/plugins/counterup.js'%}'></script>
+    <script type='text/javascript' src='{% static 'assets/js/plugins/slick.js'%}'></script>
+    <script type='text/javascript' src='include/validator.min.js'%}'></script>
+    <script type='text/javascript' src='include/contact.js'%}'></script>
+    <!-- map script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-CE0deH3Jhj6GN4YvdCFZS7DpbXexzGU"></script>
+    <script src="{% static 'assets/js/gmaps.js'%}"></script>
+    <script src="{% static 'assets/js/map-helper.js'%}"></script>
+    <!-- main-js -->
+    <script type='text/javascript' src='{% static 'assets/js/main.js'%}'></script>
+    <!----=================Script================---->
+</body>
+
+</html>

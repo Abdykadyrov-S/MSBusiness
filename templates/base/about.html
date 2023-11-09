@@ -1,0 +1,378 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+{% include 'include/header.html' %}
+
+            <!----==============content_all_warpper==============--->
+            <div id="wrapper_full" class="content_all_warpper">
+                <!----==============content_all_warpper==============--->
+                <!----==============page header==============--->
+                <section class="page_header_default pg_bg_cover alignment_center">
+                    <div class="bakground_cover" style="background-image:url({% static 'assets/images/page-image-1-min.jpg'%})"></div>
+                    <div class="page_header_content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="banner_title_inner">
+                                        <div class="title">
+                                            <span class="main_tit">О Нас</span> </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 vankine">
+                                    <ul class="breadcrumb m-auto">
+                                        <li><a href="{% url 'index' %}">Главная</a> </li>
+                                        <li class="active">О Нас</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!----==============page header==============--->
+                <!--content start-->
+                <div id="content" class="site-content">
+
+                    <!---about-->
+                    <section class="about-section position-relative">
+                        <!---============spacing==========--->
+                        <div class="pd_top_90"></div>
+                        <!---============spacing==========--->
+
+                        <div class="auto-container">
+                            <div class="row align-items-start">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="image_box_only type_seven">
+                                       
+                                       
+
+                                        <div class="fun_facts type_two">
+                                            <h4>
+                                                <span class="count">{{about.experience}}</span>
+                                                <small>
+                                                    + </small></h4>
+                                            <h6 class="title_no_a_26">Года Опыта</h6>
+                                        </div>
+                                        <div class="m_image">
+                                            <img src="{{about.image.url}}" alt="img" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 pd_left_30">
+                                    <div class="section_title type_one">
+                                        <div class="title_whole">
+                                            <h2 class="title"> О Компании</h2>
+                                        </div>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="mr_bottom_20"></div>
+                                    <!---============spacing==========--->
+                                    <div class="fom_tab_box custom_tabs only_tab_content">
+                                        <div class="s_tabs_content tab-content">
+                                            <div class="tab-pane  active" id="aboutuss" role="tabpanel"
+                                                aria-labelledby="aboutuss-tabtab">
+                                                <div class="tab_content_box">
+                                                    <div class="content">
+                                                       <p> {{about.descriptions}}</p>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---============spacing==========--->
+
+                                    <!---============spacing==========--->
+                                    
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_70"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ab_img_right_bottom z_minus_1">
+                            <img src="{% static 'assets/images/bg-2.png'%}" class="img-fluid" alt="img" />
+                        </div>
+                    </section>
+                    <!---about end-->
+                    <!--service-->
+                  
+                    <div class="pd_bottom_180"></div>
+                    <!--service-->
+                    <!--content-->
+                    <section class="content-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="section_title type_one">
+                                        <h4 class="sm_title"> Почему выбрали нас</h4>
+                                        <div class="title_whole">
+                                            <h2 class="title"> Мы Помогаем Развить Ваш Бизнес</h2>
+                                        </div>
+                                        <p> В MSBusiness мы стремимся к вашему успеху, считая его нашей главной приоритетной заботой. Мы гордимся вашими достижениями и нашей способностью помогать вам расти. Ваша успешная дорога - наша главная миссия, и мы готовы работать бок о бок с вами, чтобы обеспечить ее осуществление.</p>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_40"></div>
+                                    <!---============spacing==========--->
+                                    
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_40"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="image_video_box_only  type_one mr_bottom_minus_90 z_1">
+                                        <div class="image one height_530px">
+                                            <img src="{% static 'assets/images/why-choose-1.png'%}" alt="img" class="img-fluid height_530px"> 
+                                            <div class="video_box video-inner text-center">
+                                                <a href="https://youtu.be/RN81h85V6D4" class="lightbox-image">
+                                                    <i class="fi-rr-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--content-->
+                    <!--funfacts-->
+                    <section class="analysis-section position-relative bg_1 overflow-hidden">
+                        <!---============spacing==========--->
+                        <div class="pd_top_170"></div>
+                        <!---============spacing==========--->
+                       
+                        <div class="medium-container-two">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="section_title text-center color_white type_one">
+                                        <h4 class="sm_title">Анализ статистики компании</h4>
+                                        <div class="title_whole">
+                                            <h2 class="title">Большое достижение в развитии</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!---============spacing==========--->
+                            <div class="pd_bottom_30"></div>
+                            <!---============spacing==========--->
+
+                            <div class="row">
+                                <div class="col-lg-1 col-md-6 col-sm-6 col-xs-12"></div>
+                                <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="fun_facts type_one color_white">
+                                        <div class="icon trans">
+                                            <div class="icon_in trans">
+                                                <i class=" flaticon-satisfaction"></i></div>
+                                        </div>
+                                        <h4>
+                                            <span class="count">{{about.clients}}</span>
+                                            <small>
+                                                + </small></h4>
+                                        <h6 class="title_no_a_18">Довольных клиентов</h6>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_20"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="fun_facts type_one color_white">
+                                        <div class="icon trans">
+                                            <div class="icon_in trans">
+                                                <i class=" flaticon-business-people"></i></div>
+                                        </div>
+                                        <h4>
+                                            <span class="count">{{about.staff}}</span>
+                                            <small>
+                                                + </small></h4>
+                                        <h6 class="title_no_a_18">Опытных сотрудников</h6>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_20"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="fun_facts type_one color_white">
+                                        <div class="icon trans">
+                                            <div class="icon_in trans">
+                                                <i class=" flaticon-reviews"></i></div>
+                                        </div>
+                                        <h4>
+                                            <span class="count">{{about.level}}</span>
+                                            <small>
+                                                % </small></h4>
+                                        <h6 class="title_no_a_18">Уровень удовлетворенности</h6>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_20"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="fun_facts type_one color_white">
+                                        <div class="icon trans">
+                                            <div class="icon_in trans">
+                                                <i class=" flaticon-presenter"></i></div>
+                                        </div>
+                                        <h4>
+                                            <span class="count">{{about.experience}}</span>
+                                            <small>
+                                                + </small></h4>
+                                        <h6 class="title_no_a_18">Многолетний опыт</h6>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_20"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="fun_facts type_one color_white">
+                                        <div class="icon trans">
+                                            <div class="icon_in trans">
+                                                <i class=" flaticon-trophy"></i></div>
+                                        </div>
+                                        <h4>
+                                            <span class="count">{{about.awards}}</span>
+                                            <small>
+                                                + </small></h4>
+                                        <h6 class="title_no_a_18">Награды</h6>
+                                    </div>
+                                    <!---============spacing==========--->
+                                    <div class="pd_bottom_20"></div>
+                                    <!---============spacing==========--->
+                                </div>
+                                <div class="col-lg-1 col-md-6 col-sm-6 col-xs-12"></div>
+                            </div>
+
+
+                        </div>
+                        <!---============spacing==========--->
+                        <div class="pd_bottom_50"></div>
+                        <!---============spacing==========--->
+                        
+                    </section>
+                    <!--funfacts-->
+                    <!--team-->
+                    <section class="team-section">
+                        <!---============spacing==========--->
+                        <div class="pd_top_80"></div>
+                        <!---============spacing==========--->
+                        <div class="container">
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="section_title text-center type_one">
+                                        <h4 class="sm_title"> наша команда</h4>
+                                        <div class="title_whole">
+                                            <h2 class="title"> 
+                                                Познакомьтесь с нашей удивительной командой</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!---============spacing==========--->
+                            <div class="pd_bottom_40"></div>
+                            <!---============spacing==========--->
+                            <div class="row">
+                                {% for person in team_about %}
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="team_box type_two">
+                                        <div class="team_box_inner">
+                                            <div class="contnet">
+                                                <h6 class="title_22">
+                                                    <a href="{% url 'team-single' person.id %}">
+                                                        {{person.name}} </a></h6>
+                                                <p> {{person.job}}</p>
+                                            </div>
+                                            <div class="image_box">
+                                                <img src="{{person.image.url}}" alt="img"
+                                                    class="img-fluid" />
+                                                <div class="social-icons trans">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="team.html#" class="m_icon">
+                                                                <i class="fab fa-facebook"></i>
+                                                            </a></li>
+                                                        <li>
+                                                            <a href="team.html#" class="m_icon">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a></li>
+                                                        <li>
+                                                            <a href="team.html#" class="m_icon">
+                                                                <i class="fab fa-skype"></i>
+                                                            </a></li>
+                                                        <li>
+                                                            <a href="team.html#" class="m_icon">
+                                                                <i class="fab fa-instagram"></i>
+                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!---============spacing==========--->
+                        <div class="pd_bottom_80"></div>
+                        <!---============spacing==========--->
+                    </section>
+                    <!--team-->
+                    <!--client-->
+                    <section class="client-section bg_light_1">
+                        <!---============spacing==========--->
+                        <div class="pd_top_40"></div>
+                        <!---============spacing==========--->
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4 col-md-12 pd_right_60">
+                                    <div class="section_title type_one small">
+                                        <h4 class="sm_title"> Популярные клиенты</h4>
+                                        <div class="title_whole">
+                                            <h2 class="title"> У нас более 1520 премиальных клиентов по всему миру.</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="iamge mr_bottom_20 mr_top_20">
+                                                <img src="{% static 'assets/images/MS/client-logo-1.png'%}" class="img-fluid m-auto" alt="client" style="width: 70%;">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="iamge mr_bottom_20 mr_top_20">
+                                                <img src="{% static 'assets/images/MS/client-logo-2.png'%}" class="img-fluid m-auto" alt="client" style="width: 70%;">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="iamge mr_bottom_20 mr_top_20">
+                                                <img src="{% static 'assets/images/MS/client-logo-3.png'%}" class="img-fluid m-auto" alt="client" style="width: 70%;">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="iamge mr_bottom_20 mr_top_20">
+                                                <img src="{% static 'assets/images/MS/client-logo-4.png'%}" class="img-fluid m-auto" alt="client" style="width: 70%;">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="iamge mr_bottom_20 mr_top_20">
+                                                <img src="{% static 'assets/images/MS/client-logo-6.png'%}" class="img-fluid m-auto" alt="client" style="width: 70%;">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="iamge mr_bottom_20 mr_top_20">
+                                                <img src="{% static 'assets/images/MS/client-logo-8.png'%}" class="img-fluid m-auto" alt="client" style="width: 70%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---============spacing==========--->
+                        <div class="pd_bottom_30"></div>
+                        <!---============spacing==========--->
+                    </section>
+                    <!--client-->
+
+                </div>
+                <!--content end-->
+                {% include 'include/footer.html' %}
+                {% endblock %}
