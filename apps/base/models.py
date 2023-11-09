@@ -120,6 +120,7 @@ class OperationProcess(models.Model):
         verbose_name = ''
         verbose_name_plural = 'Процесс работы'
 
+
 class About(models.Model):
     title = models.CharField(
         max_length=255,
@@ -134,6 +135,24 @@ class About(models.Model):
         upload_to = "about_image",
         verbose_name="Фотография",
         blank = True,null = True    
+    )
+    title_2 = models.CharField(
+        max_length=255,
+        verbose_name="Заголовок №2"
+    )
+    descriptions_2 = models.TextField(
+        verbose_name="Описание №2"
+    )
+    image_2 = ResizedImageField(
+        force_format = "WEBP",
+        quality = "100",
+        upload_to = "about_image",
+        verbose_name="Фотография №2",
+        blank = True,null = True    
+    )
+    youtube = models.URLField(
+        verbose_name='YouTube - ссылка на видео',
+        blank=True, null=True
     )
     clients = models.IntegerField(
         verbose_name='Кол-во Довольные клиенты'
@@ -150,6 +169,7 @@ class About(models.Model):
     awards = models.IntegerField(
         verbose_name='Награды'
     )
+    
     
     def __str__(self):
         return self.title

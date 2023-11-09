@@ -60,7 +60,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 pd_left_30">
                                     <div class="section_title type_one">
                                         <div class="title_whole">
-                                            <h2 class="title"> О Компании</h2>
+                                            <h2 class="title"> {{about.title}}</h2>
                                         </div>
                                     </div>
                                     <!---============spacing==========--->
@@ -104,11 +104,10 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="section_title type_one">
-                                        <h4 class="sm_title"> Почему выбрали нас</h4>
                                         <div class="title_whole">
-                                            <h2 class="title"> Мы Помогаем Развить Ваш Бизнес</h2>
+                                            <h2 class="title"> {{about.title_2}}</h2>
                                         </div>
-                                        <p> В MSBusiness мы стремимся к вашему успеху, считая его нашей главной приоритетной заботой. Мы гордимся вашими достижениями и нашей способностью помогать вам расти. Ваша успешная дорога - наша главная миссия, и мы готовы работать бок о бок с вами, чтобы обеспечить ее осуществление.</p>
+                                        <p>{{about.descriptions_2}}</p>
                                     </div>
                                     <!---============spacing==========--->
                                     <div class="pd_bottom_40"></div>
@@ -121,9 +120,9 @@
                                 <div class="col-lg-6">
                                     <div class="image_video_box_only  type_one mr_bottom_minus_90 z_1">
                                         <div class="image one height_530px">
-                                            <img src="{% static 'assets/images/why-choose-1.png'%}" alt="img" class="img-fluid height_530px"> 
+                                            <img src="{{about.image_2.url}}" alt="img" class="img-fluid height_530px"> 
                                             <div class="video_box video-inner text-center">
-                                                <a href="https://youtu.be/RN81h85V6D4" class="lightbox-image">
+                                                <a href="{{about.youtube}}" class="lightbox-image">
                                                     <i class="fi-rr-play"></i>
                                                 </a>
                                             </div>
