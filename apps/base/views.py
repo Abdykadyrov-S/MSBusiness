@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Settings, About, Contact
+from .models import Settings, About, Contact, OperationProcess
 from apps.team.models import Team
 from apps.benefits.models import Benefits
 from apps.telegram.views import get_text
@@ -14,7 +14,7 @@ def index(request):
     benefits = Benefits.objects.all().order_by('?')[:4]
     service = Service.objects.all() 
     benefits_footer = Benefits.objects.all()
-
+    operetion_all = OperationProcess.objects.all()[:3]
     return render(request, "base/index.html",locals())
 
 def about(request):

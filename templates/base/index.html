@@ -124,11 +124,12 @@
                 <!---============spacing==========--->
                 <div class="service_post position-relative  ajax_service_enabled ">
                     <div class="row">
+                        {% for operation in operetion_all %}
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                             <div class="service_box type_two hover_1_get">
-                                <a href="service.html" class="img_bx">
+                                <a href="{% url 'services' %}" class="img_bx">
                                     <div class="image trans hover_1">
-                                        <img src="{% static 'assets/images/service/other-ser-2.jpg'%}" class="img-fluid"
+                                        <img src="{{ operation.image.url }}" class="img-fluid"
                                             alt="service-image" />
                                         <div class="oh ho_1"></div>
                                         <div class="oh ho_2"></div>
@@ -138,78 +139,28 @@
                                 </a>
                                 <div class="content_box trans">
                                     <div class="icon trans">
+                                        {% if operation.icon == 'ИЗУЧЕНИЕ' %}
                                         <i class="flaticon-salary trans"></i>
-                                    </div>
-                                    <h4 class="title_24 trans">
-                                        <a href="service.html">
-                                            Изучение
-                                        </a>
-                                    </h4>
-                                    <p class="trans service_desc">
-                                        Проводим глубокую диагностику Вашего бизнеса, изучаем процессы, выявляем
-                                        все боли и слабые места.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                            <div class="service_box type_two hover_1_get">
-                                <a href="service.html" class="img_bx">
-                                    <div class="image trans hover_1">
-                                        <img src="{% static 'assets/images/service/other-ser-3.jpg'%}" class="img-fluid"
-                                            alt="service-image" />
-                                        <div class="oh ho_1"></div>
-                                        <div class="oh ho_2"></div>
-                                        <div class="oh ho_3"></div>
-                                        <div class="oh ho_4"></div>
-                                    </div>
-                                </a>
-                                <div class="content_box trans">
-                                    <div class="icon trans">
+                                        {% endif %}
+                                        {% if operation.icon == 'РАЗРАБОТКА' %}
                                         <i class="flaticon-management trans"></i>
-                                    </div>
-                                    <h4 class="title_24 trans">
-                                        <a href="service.html">
-                                            РАЗРАБОТКА
-                                        </a>
-                                    </h4>
-                                    <p class="trans service_desc">
-                                        Согласовываем все пункты ТЗ и бюджет с вами. Начинаем разработку
-                                        проекта.
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                            <div class="service_box type_two hover_1_get">
-                                <a href="service.html" class="img_bx">
-                                    <div class="image trans hover_1">
-                                        <img src="{% static 'assets/images/service/other-ser-1.jpg'%}" class="img-fluid"
-                                            alt="service-image" />
-                                        <div class="oh ho_1"></div>
-                                        <div class="oh ho_2"></div>
-                                        <div class="oh ho_3"></div>
-                                        <div class="oh ho_4"></div>
-                                    </div>
-                                </a>
-                                <div class="content_box trans">
-                                    <div class="icon trans">
+                                        {% endif %}
+                                        {% if operation.icon == 'ЗАПУСК' %}
                                         <i class="flaticon-business-trip trans"></i>
+                                        {% endif %}
                                     </div>
                                     <h4 class="title_24 trans">
-                                        <a href="service.html">
-                                            ЗАПУСК
+                                        <a href="{% url 'services' %}">
+                                            {{ operation.title }}
                                         </a>
                                     </h4>
                                     <p class="trans service_desc">
-                                        Внедряем все разработанные инструменты/презентуем результаты
-                                        исследований.
+                                        {{ operation.descriptions }}
                                     </p>
-
                                 </div>
                             </div>
                         </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
