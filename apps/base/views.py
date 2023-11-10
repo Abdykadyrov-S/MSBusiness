@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Settings, About, Contact, OperationProcess
+from .models import Settings, About, Contact, OperationProcess, Service_Contact
 from apps.team.models import Team
 from apps.benefits.models import Benefits
 from apps.telegram.views import get_text
@@ -15,6 +15,19 @@ def index(request):
     service = Service.objects.all() 
     benefits_footer = Benefits.objects.all()
     operetion_all = OperationProcess.objects.all()[:3]
+    if request.method =="POST":
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        choice = request.POST.get('choice')
+        email = request.POST.get('email')
+        Service_Contact.objects.create(name=name, phone=phone, choice=choice, email=email)
+
+        get_text(f""" Оставлена заявка на услугу {choice}
+Имя пользователя: {name}
+Номер телефона: {phone}
+email: {email}
+""")
+        return redirect('index')
     return render(request, "base/index.html",locals())
 
 def about(request):
@@ -35,7 +48,7 @@ def contact(request):
         phone = request.POST.get('phone')
         message = request.POST.get('message')
         cause = request.POST.get('cause')
-        Contact.objects.create(name=name, phone=phone, message=message)
+        Contact.objects.create(name=name, phone=phone, message=message, cause=cause)
 
         get_text(f""" Оставлен отзыв 
 Имя пользователя: {name}

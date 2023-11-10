@@ -11,7 +11,7 @@
         <!---slider-->
         <section class="slider style_one">
             <div class="owl-carousel owl_nav_block owl_dots_none theme_carousel owl-theme"
-                data-options='{"loop": true, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": false, "autoplayHoverPause":true , "autoplayTimeout": 7000, "smartSpeed": 1800, "responsive":{ "0" :{ "items": "1" }, "768" :{ "items" : "1" } , "1000":{ "items" : "1" }}}'>
+                data-options='{"loop": true, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayHoverPause":true , "autoplayTimeout": 7000, "smartSpeed": 1800, "responsive":{ "0" :{ "items": "1" }, "768" :{ "items" : "1" } , "1000":{ "items" : "1" }}}'>
                 <!---sldier-->
                 <div class="slide-item-content">
                     <div class="image-layer" style="background-image:url({{settings.image_banner1.url}})">
@@ -129,8 +129,7 @@
                             <div class="service_box type_two hover_1_get">
                                 <a href="{% url 'services' %}" class="img_bx">
                                     <div class="image trans hover_1">
-                                        <img src="{{ operation.image.url }}" class="img-fluid"
-                                            alt="service-image" />
+                                        <img src="{{ operation.image.url }}" class="img-fluid" alt="service-image" />
                                         <div class="oh ho_1"></div>
                                         <div class="oh ho_2"></div>
                                         <div class="oh ho_3"></div>
@@ -498,85 +497,28 @@
                     <!---============spacing==========--->
                     <section class="fom_tab_box custom_tabs type_one">
 
-                        <form action="#" method="post">
-                            <ul class="nav nav-tabs links trans justify-content-center" role="tablist">
-                                <li class="nav-item">
-                                    <section class="nav-link" id="tab1-cartab" data-bs-toggle="tab"
-                                        data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1"
-                                        aria-selected="false">
-                                        Стратегия Развития
-                                    </section>
-                                </li>
-                                <li class="nav-item">
-                                    <section class="nav-link active" id="tab2-cartab" data-bs-toggle="tab"
-                                        data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2"
-                                        aria-selected="true">
-                                        Маркетинговая Стратегия
-                                    </section>
-                                </li>
-                                <li class="nav-item">
-                                    <section class="nav-link " id="tab3-cartab" data-bs-toggle="tab"
-                                        data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3"
-                                        aria-selected="false">
-                                        Бизнес-Планирование
-                                    </section>
-                                </li>
-                                <li class="nav-item">
-                                    <section class="nav-link " id="tab4-cartab" data-bs-toggle="tab"
-                                        data-bs-target="#tab4" type="button" role="tab" aria-controls="tab4"
-                                        aria-selected="false">
-                                        Организационная Стратегия
-                                    </section>
-                                </li>
-                                <li class="nav-item">
-                                    <section class="nav-link " id="tab5-cartab" data-bs-toggle="tab"
-                                        data-bs-target="#tab5" type="button" role="tab" aria-controls="tab5"
-                                        aria-selected="false">
-                                        Иследование И Онализ Рынков
-                                    </section>
-                                </li>
-                                <li class="nav-item">
-                                    <section class="nav-link " id="tab6-cartab" data-bs-toggle="tab"
-                                        data-bs-target="#tab6" type="button" role="tab" aria-controls="tab6"
-                                        aria-selected="false">
-                                        Кабинетные Иследования
-                                    </section>
-                                </li>
-                                <li class="nav-item">
-                                    <section class="nav-link " id="tab7-cartab" data-bs-toggle="tab"
-                                        data-bs-target="#tab7" type="button" role="tab" aria-controls="tab7"
-                                        aria-selected="false">
-                                        Брендинг И Фирменный Стиль
-                                    </section>
-                                </li>
-                                <li class="nav-item">
-                                    <section class="nav-link " id="tab8-cartab" data-bs-toggle="tab"
-                                        data-bs-target="#tab8" type="button" role="tab" aria-controls="tab8"
-                                        aria-selected="false">
-                                        Финансовый Налоговый Консалтинг
-                                    </section>
-                                </li>
-                                <li class="nav-item">
-                                    <section class="nav-link " id="tab9-cartab" data-bs-toggle="tab"
-                                        data-bs-target="#tab9" type="button" role="tab" aria-controls="tab9"
-                                        aria-selected="false">
-                                        Автоматизация Бизнеса
-                                    </section>
-                                </li>
-                                <li class="nav-item">
-                                    <section class="nav-link " id="tab10-cartab" data-bs-toggle="tab"
-                                        data-bs-target="#tab10" type="button" role="tab" aria-controls="tab10"
-                                        aria-selected="false">
-                                        Дизайн И Архитектура
-                                    </section>
-                                </li>
-                            </ul>
-                        </form>
                         <div class="s_tabs_content tab-content">
-                            <div class="tab-pane" id="tab1" role="tabpanel" aria-labelledby="tab1-cartab">
+                            <div class="tab-pane active" id="tab1" role="tabpanel" aria-labelledby="tab1-cartab">
                                 <div class="contentbox ">
                                     <div class="contact_form_shortcode">
-                                        <form method="post" action="index.html#">
+                                        <form method="post">
+                                            {% csrf_token %}
+                                            <select name="choice" id="">
+                                                <option value="Стратегия Развития">Стратегия Развития</option>
+                                                <option value="Маркетинговая Стратегия">Маркетинговая Стратегия</option>
+                                                <option value="Бизнес-Планирование">Бизнес-Планирование</option>
+                                                <option value="Организационная Стратегия">Организационная Стратегия
+                                                </option>
+                                                <option value="Иследование И Онализ Рынков">Иследование И Онализ Рынков
+                                                </option>
+                                                <option value="Кабинетные Иследования">Кабинетные Иследования</option>
+                                                <option value="Брендинг И Фирменный Стиль">Брендинг И Фирменный Стиль
+                                                </option>
+                                                <option value="инансовый Налоговый Консалтинг">Финансовый Налоговый
+                                                    Консалтинг</option>
+                                                <option value="Автоматизация Бизнеса">Автоматизация Бизнеса</option>
+                                                <option value="Дизайн И Архитектура">Дизайн И Архитектура</option>
+                                            </select>
                                             <div class="row">
                                                 <div class="col-lg-4 col-md-4 col-sm-12">
                                                     <label>ФИО <span>*</span></label>
@@ -599,6 +541,8 @@
                                                     <input type="range" name="range" value="4000" min="0" max="8560"
                                                         step="1">
                                                     <div class="slider-hint">Выбранное значение: <b>4000</b>
+
+
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-12 text-md-end">
@@ -611,335 +555,6 @@
                                 </div>
                             </div>
 
-                            <div class="tab-pane active" id="tab2" role="tabpanel" aria-labelledby="tab2-cartab">
-                                <div class="contentbox ">
-                                    <div class="contact_form_shortcode">
-                                        <form method="post" action="index.html#">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                                    <label>ФИО <span>*</span></label>
-                                                    <input type="text" name="name" placeholder="Антонов Антон Антонович"
-                                                        required="">
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                                    <label>Телефон</label>
-                                                    <input type="text" name="phone" placeholder="+996-777-777-777">
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                                    <label>Адресс Email <span
-                                                            class="wpforms-required-label">*</span></label>
-                                                    <input type="email" name="email" placeholder="Ваша почта@gmail.com"
-                                                        required="">
-                                                </div>
-
-                                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                                    <label>Лимит по бюджету</label>
-                                                    <input type="range" name="range" value="4000" min="0" max="8560"
-                                                        step="1">
-                                                    <div class="slider-hint">Выбранное значение: <b>4000</b>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-3 col-sm-12 text-md-end">
-                                                    <button type="submit">Отправить</button>
-                                                </div>
-                                            </div>
-
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane  " id="tab3" role="tabpanel" aria-labelledby="tab3-cartab">
-                                <div class="contact_form_shortcode">
-                                    <form method="post" action="index.html#">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>ФИО <span>*</span></label>
-                                                <input type="text" name="name" placeholder="Антонов Антон Антонович"
-                                                    required="">
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>Телефон</label>
-                                                <input type="text" name="phone" placeholder="+996-777-777-777">
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>Адресс Email <span
-                                                        class="wpforms-required-label">*</span></label>
-                                                <input type="email" name="email" placeholder="Ваша почта@gmail.com"
-                                                    required="">
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <label>Лимит по бюджету</label>
-                                                <input type="range" name="range" value="4000" min="0" max="8560"
-                                                    step="1">
-                                                <div class="slider-hint">Выбранное значение: <b>4000</b>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3 col-sm-12 text-md-end">
-                                                <button type="submit">Отправить</button>
-                                            </div>
-                                        </div>
-
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane  " id="tab4" role="tabpanel" aria-labelledby="tab4-cartab">
-                                <div class="contact_form_shortcode">
-                                    <form method="post" action="index.html#">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>ФИО <span>*</span></label>
-                                                <input type="text" name="name" placeholder="Антонов Антон Антонович"
-                                                    required="">
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>Телефон</label>
-                                                <input type="text" name="phone" placeholder="+996-777-777-777">
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>Адресс Email <span
-                                                        class="wpforms-required-label">*</span></label>
-                                                <input type="email" name="email" placeholder="Ваша почта@gmail.com"
-                                                    required="">
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <label>Лимит по бюджету</label>
-                                                <input type="range" name="range" value="4000" min="0" max="8560"
-                                                    step="1">
-                                                <div class="slider-hint">Выбранное значение: <b>4000</b>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3 col-sm-12 text-md-end">
-                                                <button type="submit">Отправить</button>
-                                            </div>
-                                        </div>
-
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane  " id="tab5" role="tabpanel" aria-labelledby="tab5-cartab">
-                                <div class="contact_form_shortcode">
-                                    <form method="post" action="index.html#">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>ФИО <span>*</span></label>
-                                                <input type="text" name="name" placeholder="Антонов Антон Антонович"
-                                                    required="">
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>Телефон</label>
-                                                <input type="text" name="phone" placeholder="+996-777-777-777">
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>Адресс Email <span
-                                                        class="wpforms-required-label">*</span></label>
-                                                <input type="email" name="email" placeholder="Ваша почта@gmail.com"
-                                                    required="">
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <label>Лимит по бюджету</label>
-                                                <input type="range" name="range" value="4000" min="0" max="8560"
-                                                    step="1">
-                                                <div class="slider-hint">Выбранное значение: <b>4000</b>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3 col-sm-12 text-md-end">
-                                                <button type="submit">Отправить</button>
-                                            </div>
-                                        </div>
-
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane  " id="tab6" role="tabpanel" aria-labelledby="tab6-cartab">
-                                <div class="contact_form_shortcode">
-                                    <form method="post" action="index.html#">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>ФИО <span>*</span></label>
-                                                <input type="text" name="name" placeholder="Антонов Антон Антонович"
-                                                    required="">
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>Телефон</label>
-                                                <input type="text" name="phone" placeholder="+996-777-777-777">
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>Адресс Email <span
-                                                        class="wpforms-required-label">*</span></label>
-                                                <input type="email" name="email" placeholder="Ваша почта@gmail.com"
-                                                    required="">
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <label>Лимит по бюджету</label>
-                                                <input type="range" name="range" value="4000" min="0" max="8560"
-                                                    step="1">
-                                                <div class="slider-hint">Выбранное значение: <b>4000</b>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3 col-sm-12 text-md-end">
-                                                <button type="submit">Отправить</button>
-                                            </div>
-                                        </div>
-
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane" id="tab7" role="tabpanel" aria-labelledby="tab7-cartab">
-                                <div class="contentbox ">
-                                    <div class="contact_form_shortcode">
-                                        <form method="post" action="index.html#">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                                    <label>ФИО <span>*</span></label>
-                                                    <input type="text" name="name" placeholder="Антонов Антон Антонович"
-                                                        required="">
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                                    <label>Телефон</label>
-                                                    <input type="text" name="phone" placeholder="+996-777-777-777">
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                                    <label>Адресс Email <span
-                                                            class="wpforms-required-label">*</span></label>
-                                                    <input type="email" name="email" placeholder="Ваша почта@gmail.com"
-                                                        required="">
-                                                </div>
-
-                                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                                    <label>Лимит по бюджету</label>
-                                                    <input type="range" name="range" value="4000" min="0" max="8560"
-                                                        step="1">
-                                                    <div class="slider-hint">Выбранное значение: <b>4000</b>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-3 col-sm-12 text-md-end">
-                                                    <button type="submit">Отправить</button>
-                                                </div>
-                                            </div>
-
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane" id="tab8" role="tabpanel" aria-labelledby="tab8-cartab">
-                                <div class="contentbox ">
-                                    <div class="contact_form_shortcode">
-                                        <form method="post" action="index.html#">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                                    <label>ФИО <span>*</span></label>
-                                                    <input type="text" name="name" placeholder="Антонов Антон Антонович"
-                                                        required="">
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                                    <label>Телефон</label>
-                                                    <input type="text" name="phone" placeholder="+996-777-777-777">
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                                    <label>Адресс Email <span
-                                                            class="wpforms-required-label">*</span></label>
-                                                    <input type="email" name="email" placeholder="Ваша почта@gmail.com"
-                                                        required="">
-                                                </div>
-
-                                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                                    <label>Лимит по бюджету</label>
-                                                    <input type="range" name="range" value="4000" min="0" max="8560"
-                                                        step="1">
-                                                    <div class="slider-hint">Выбранное значение: <b>4000</b>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-3 col-sm-12 text-md-end">
-                                                    <button type="submit">Отправить</button>
-                                                </div>
-                                            </div>
-
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane  " id="tab9" role="tabpanel" aria-labelledby="tab9-cartab">
-                                <div class="contact_form_shortcode">
-                                    <form method="post" action="index.html#">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>ФИО <span>*</span></label>
-                                                <input type="text" name="name" placeholder="Антонов Антон Антонович"
-                                                    required="">
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>Телефон</label>
-                                                <input type="text" name="phone" placeholder="+996-777-777-777">
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>Адресс Email <span
-                                                        class="wpforms-required-label">*</span></label>
-                                                <input type="email" name="email" placeholder="Ваша почта@gmail.com"
-                                                    required="">
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <label>Лимит по бюджету</label>
-                                                <input type="range" name="range" value="4000" min="0" max="8560"
-                                                    step="1">
-                                                <div class="slider-hint">Выбранное значение: <b>4000</b>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3 col-sm-12 text-md-end">
-                                                <button type="submit">Отправить</button>
-                                            </div>
-                                        </div>
-
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane  " id="tab10" role="tabpanel" aria-labelledby="tab10-cartab">
-                                <div class="contact_form_shortcode">
-                                    <form method="post" action="index.html#">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>ФИО <span>*</span></label>
-                                                <input type="text" name="name" placeholder="Антонов Антон Антонович"
-                                                    required="">
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>Телефон</label>
-                                                <input type="text" name="phone" placeholder="+996-777-777-777">
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <label>Адресс Email <span
-                                                        class="wpforms-required-label">*</span></label>
-                                                <input type="email" name="email" placeholder="Ваша почта@gmail.com"
-                                                    required="">
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <label>Лимит по бюджету</label>
-                                                <input type="range" name="range" value="4000" min="0" max="8560"
-                                                    step="1">
-                                                <div class="slider-hint">Выбранное значение: <b>4000</b>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3 col-sm-12 text-md-end">
-                                                <button type="submit">Отправить</button>
-                                            </div>
-                                        </div>
-
-                                    </form>
-                                </div>
-                            </div>
 
                         </div>
                 </div>

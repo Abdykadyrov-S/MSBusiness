@@ -188,7 +188,7 @@ class Contact(models.Model):
     )
     phone = models.CharField(
         max_length=155,
-        verbose_name="Почта",
+        verbose_name="Номер телефона",
         null=True,blank=True
     )
     cause = models.CharField(
@@ -208,3 +208,31 @@ class Contact(models.Model):
         verbose_name = "Оставленный отзыв"
         verbose_name_plural = "Оставленные отзывы"
 
+class Service_Contact(models.Model):
+    choice = models.CharField(
+        max_length=155,
+        verbose_name="Выбор услуги",
+        null=True,blank=True
+    )
+    name = models.CharField(
+        max_length=155,
+        verbose_name="Имя пользователя",
+        null=True,blank=True
+    )
+    phone = models.CharField(
+        max_length=155,
+        verbose_name="Номер телефона",
+        null=True,blank=True
+    )
+    email = models.URLField(
+        max_length=155,
+        verbose_name="Почта",
+        null=True,blank=True
+    )
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = "Оставленная заявка на услугу"
+        verbose_name_plural = "Оставленная заявка на услугу"
