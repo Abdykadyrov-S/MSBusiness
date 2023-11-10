@@ -13,7 +13,7 @@ def index(request):
     about = About.objects.latest('id')
     benefits = Benefits.objects.all().order_by('?')[:4]
     service = Service.objects.all() 
-    benefits_footer = Benefits.objects.all()
+    benefits_footer = Benefits.objects.all().order_by('?')[:6]
     operetion_all = OperationProcess.objects.all()[:3]
     if request.method =="POST":
         name = request.POST.get('name')
@@ -35,13 +35,13 @@ def about(request):
     about = About.objects.latest('id')
     team_about = Team.objects.all().order_by('?')[:4]
     service = Service.objects.all() 
-    benefits_footer = Benefits.objects.all()
+    benefits_footer = Benefits.objects.all().order_by('?')[:6]
 
     return render(request, "base/about.html",locals())
     
 def contact(request):
     settings = Settings.objects.latest('id')
-    benefits_footer = Benefits.objects.all()
+    benefits_footer = Benefits.objects.all().order_by('?')[:6]
     service = Service.objects.all()
     if request.method =="POST":
         name = request.POST.get('name')
