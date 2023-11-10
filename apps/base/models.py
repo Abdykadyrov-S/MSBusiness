@@ -94,17 +94,12 @@ class OperationProcess(models.Model):
         upload_to='process',
         verbose_name='фото'
     )
-    title = models.CharField(
-        max_length=155,
+    title = models.TextField(
         verbose_name='Заголовка'
     )
     descriptions = models.CharField(
         max_length=300,
         verbose_name='Описание'
-    )
-    number = models.CharField(
-        max_length=100,
-        verbose_name='Номер Блога'
     )
     icon = models.CharField(
         max_length=50,
