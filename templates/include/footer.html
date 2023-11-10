@@ -75,13 +75,13 @@
                                     </div>
                                     <div class="position-relative">
                                         <ul class="list_box list">
-                                            {% for service in service %}
+                                            {% for service in service_footer %}
                                             <li>
                                                 <div class="d-flex align-items-center">
                                                     <div class="icon trans">
                                                         <i class="fi-rr-arrow-small-right color_white"></i>
                                                     </div>
-                                                    <a class="links color_white" href="{% url 'services' %}">
+                                                    <a class="links color_white" href="{% url 'services_detail' service.id %}">
                                                         {{ service.title }}
                                                     </a>
                                                 </div>

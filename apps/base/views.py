@@ -12,7 +12,7 @@ def index(request):
     services = Service.objects.all().order_by('?')[:4]
     about = About.objects.latest('id')
     benefits = Benefits.objects.all().order_by('?')[:4]
-    service = Service.objects.all() 
+    service_footer = Service.objects.all().order_by('?')[:6]
     benefits_footer = Benefits.objects.all().order_by('?')[:6]
     operetion_all = OperationProcess.objects.all()[:3]
     if request.method =="POST":
@@ -34,7 +34,7 @@ def about(request):
     settings = Settings.objects.latest('id')
     about = About.objects.latest('id')
     team_about = Team.objects.all().order_by('?')[:4]
-    service = Service.objects.all() 
+    service_footer = Service.objects.all().order_by('?')[:6]
     benefits_footer = Benefits.objects.all().order_by('?')[:6]
 
     return render(request, "base/about.html",locals())
@@ -42,7 +42,7 @@ def about(request):
 def contact(request):
     settings = Settings.objects.latest('id')
     benefits_footer = Benefits.objects.all().order_by('?')[:6]
-    service = Service.objects.all()
+    service_footer = Service.objects.all().order_by('?')[:6]
     if request.method =="POST":
         name = request.POST.get('name')
         phone = request.POST.get('phone')
