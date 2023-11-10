@@ -4561,7 +4561,7 @@ body .service_post.style_one .owl-carousel .owl-dots {
 .service_box.type_seven .content .img-fluid {
   position: absolute;
   top: 0;
-  width: 100%;
+  max-width: 100% !important;
   height: 100%;
   left: 0;
   -o-object-fit: cover;
@@ -10011,6 +10011,13 @@ a {
 
 .logo_default {
   width: 180px;
+}
+
+.logo-footer{
+  padding: 10px;
+  background: #fff;
+  max-width: 205px;
+  border-radius: 30px;
 }
 
 img {
