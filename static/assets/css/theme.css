@@ -2231,6 +2231,8 @@ pre {
   transform-origin: bottom;
   transition: all 1000ms ease;
   z-index: 10;
+  width: 80%;
+  word-break: break-all;
 }
 
 .owl-item.active .animate_left {
@@ -2300,6 +2302,7 @@ pre {
   position: absolute;
   top: 0;
   left: 0;
+  width: 80%;
 }
 
 .slider.style_one .slider_content h6 {
@@ -3020,8 +3023,9 @@ pre {
 }
 
 @media (max-width: 1200px) {
+  
   .slider.style_one .slider_content h1 {
-    font-size: 55px;
+    font-size: 32px;
     line-height: 65px;
   }
 
@@ -3042,8 +3046,8 @@ pre {
   .slider.style_two .slider_content h1,
   .slider.style_three .slider_content h1,
   .single_banner.style_one h2 {
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 30px;
+    line-height: 40px;
   }
 
   .slider.style_one .slider_content .theme_btn {
@@ -3096,6 +3100,14 @@ pre {
   .slider.style_one .slider_content img {
     width: 72%;
   }
+  .slider.style_one .slider_content .bg_image {
+    width: 100%;
+  }
+  .owl-item.active .animate_left {
+    transform: perspective(400px) rotateY(0deg) translateX(-30px);
+  }
+ 
+  
 }
 
 @media (max-width: 500px) {
@@ -4561,7 +4573,7 @@ body .service_post.style_one .owl-carousel .owl-dots {
 .service_box.type_seven .content .img-fluid {
   position: absolute;
   top: 0;
-  max-width: 100% !important;
+  width: 100%;
   height: 100%;
   left: 0;
   -o-object-fit: cover;
@@ -10011,13 +10023,6 @@ a {
 
 .logo_default {
   width: 180px;
-}
-
-.logo-footer{
-  padding: 10px;
-  background: #fff;
-  max-width: 205px;
-  border-radius: 30px;
 }
 
 img {
@@ -17471,9 +17476,9 @@ input[type=range i]:focus::-webkit-slider-thumb {
   .slider.style_two .slider_content h1,
   .slider.style_three .slider_content h1,
   .single_banner.style_one h2 {
-    font-size: 26px;
-    line-height: 40px;
-    width: 50%;
+    font-size: 35px;
+    line-height: 70px;
+    width: 80%;
   }
 }
 
@@ -17493,7 +17498,8 @@ input[type=range i]:focus::-webkit-slider-thumb {
   .slider.style_two .slider_content h1,
   .slider.style_three .slider_content h1,
   .single_banner.style_one h2 {
-    width: 70%;
+   font-size: 28px;
+   line-height: 40px;
   }
   .image_box_only.type_three .right .image.three, .image_box_only.type_two .right .image {
     display: none;
@@ -17508,7 +17514,11 @@ input[type=range i]:focus::-webkit-slider-thumb {
     height: 0;
   }
 }
-
+@media (max-width:500px) {
+.slider.style_one .slider_content h1, .slider.style_two .slider_content h1, .slider.style_three .slider_content h1, .single_banner.style_one h2{
+    width: 100%;
+  }
+}
 @media (max-width:400px) {
 
   .slider.style_one .slider_content h1,
