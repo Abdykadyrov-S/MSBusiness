@@ -114,14 +114,34 @@
                                     <!---============spacing==========--->
                                     <div class="social-icons">
                                         <ul style="margin-left: 70px;">
-                                            <li><a href="contact.html#" class="m_icon"> <i class="fab fa-whatsapp"></i>
-                                                </a></li>
-                                            <li><a href="contact.html#" class="m_icon"> <i class="fab fa-twitter"></i>
-                                                </a></li>
-                                            <li><a href="contact.html#" class="m_icon"> <i class="fab fa-telegram"></i>
-                                                </a></li>
-                                            <li><a href="contact.html#" class="m_icon"> <i class="fab fa-instagram"></i>
-                                                </a></li>
+                                            {% if settings.phone %}
+                                            <li>
+                                                <a href="tel:{{settings.phone}}" class="m_icon">
+                                                    <i class="fab fa-whatsapp"></i>
+                                                </a>
+                                            </li>
+                                            {% endif %}
+                                                {% if settings.twitter %}
+                                                <li>
+                                                    <a href="{{settings.twitter}}" class="m_icon">
+                                                        <i class="fab fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% if settings.telegram %}
+                                                <li>
+                                                    <a href="{{settings.telegram}}" class="m_icon">
+                                                        <i class="fab fa-telegram"></i>
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% if settings.instagram %}
+                                                <li>
+                                                    <a href="{{settings.instagram}}" class="m_icon">
+                                                        <i class="fab fa-instagram"></i>
+                                                    </a>
+                                                </li>
+                                                {% endif %}
                                         </ul>
                                     </div>
                                     <!---============spacing==========--->

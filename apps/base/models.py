@@ -46,13 +46,13 @@ class Settings(models.Model):
 
     phone = models.CharField(
         max_length=255,
-        verbose_name='Номер телефона или '
+        verbose_name='Номер телефона'
     )
     email = models.EmailField(
         max_length=255,
         verbose_name='Почта',
         blank=True, null=True
-        )
+    )
     location = models.CharField(
         max_length=255,
         verbose_name='Адрес',
@@ -72,6 +72,11 @@ class Settings(models.Model):
     )
     instagram = models.URLField(
         verbose_name='Instagram',
+        blank=True, null=True
+    )
+    telegram = models.URLField(
+        max_length=255,
+        verbose_name='Telegram',
         blank=True, null=True
     )
 

@@ -282,26 +282,38 @@
                                             <div class="image_box">
                                                 <img src="{{person.image.url}}" alt="img"
                                                     class="img-fluid" />
-                                                <div class="social-icons trans">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="team.html#" class="m_icon">
-                                                                <i class="fab fa-facebook"></i>
-                                                            </a></li>
-                                                        <li>
-                                                            <a href="team.html#" class="m_icon">
-                                                                <i class="fab fa-twitter"></i>
-                                                            </a></li>
-                                                        <li>
-                                                            <a href="team.html#" class="m_icon">
-                                                                <i class="fab fa-skype"></i>
-                                                            </a></li>
-                                                        <li>
-                                                            <a href="team.html#" class="m_icon">
-                                                                <i class="fab fa-instagram"></i>
-                                                            </a></li>
-                                                    </ul>
-                                                </div>
+                                                    <div class="social-icons trans">
+                                                        <ul>
+                                                            {% if person.facebook %}
+                                                            <li>
+                                                                <a href="{{person.facebook}}" class="m_icon">
+                                                                    <i class="fab fa-facebook"></i>
+                                                                </a>
+                                                            </li>
+                                                            {% endif %}
+                                                            {% if person.twitter %}
+                                                            <li>
+                                                                <a href="{{person.twitter}}" class="m_icon">
+                                                                    <i class="fab fa-twitter"></i>
+                                                                </a>
+                                                            </li>
+                                                            {% endif %}
+                                                            {% if person.skype %}
+                                                            <li>
+                                                                <a href="{{person.skype}}" class="m_icon">
+                                                                    <i class="fab fa-skype"></i>
+                                                                </a>
+                                                            </li>
+                                                            {% endif %}
+                                                            {% if person.instagram %}
+                                                            <li>
+                                                                <a href="{{person.instagram}}" class="m_icon">
+                                                                    <i class="fab fa-instagram"></i>
+                                                                </a>
+                                                            </li>
+                                                            {% endif %}
+                                                        </ul>
+                                                    </div>
                                             </div>
                                         </div>
                                     </div>

@@ -329,7 +329,7 @@
                                         <div class="icon trans">
                                             <img src="{% static 'assets/images/shield.svg' %}" class="img-fluid" alt="img" />
                                         </div>
-                                        <a class="links color_white" href="index.html#">
+                                        <a class="links color_white" href="{% url 'index' %}">
                                             Copyright 2023, MSBusiness. All Rights Reserved
                                         </a>
                                     </div>
@@ -345,7 +345,7 @@
                                         <div class="icon trans">
                                             <i class=" fi-rr-clock"></i>
                                         </div>
-                                        <a class="links color_white" href="index.html#">
+                                        <a class="links color_white" href="{% url 'index' %}">
                                             График работы: Вс-понедельник, с 09:00 до 17:00.
                                         </a>
                                     </div>
@@ -370,7 +370,7 @@
         <div class="menu-backdrop"></div>
         <nav class="menu-box scrollbarcolor">
             <div class="close-btn"><i class="fi-rr-cross"></i></div>
-            <form role="search" method="get" action="index.html#">
+            <form role="search" method="get" action="{% url 'index' %}">
                 <input type="search" class="search" placeholder="Поиск..." value="" name="s" title="Search" />
                 <button type="submit" class="sch_btn"> <i class="fa fa-search"></i></button>
             </form>
@@ -383,18 +383,18 @@
             </div>
             <div class="mobile-header-info-wrap">
                 <div class="single-mobile-header-info">
-                    <a href="tel:9806071234" class="cnt"><i class="fi-rs-headphones"></i>+996-777-777-777</a>
+                    <a href="tel:{{settings.phone}}" class="cnt"><i class="fi-rs-headphones"></i>{{settings.phone}}</a>
                 </div>
 
                 <div class="single-mobile-header-info cont_over">
-                    <a href="mailto:sendmail@example.com" class="cnt"><i
-                            class="fi-rs-envelope"></i>mailbox.msbusiness@gmail.com</a>
+                    <a href="mailto:{{settings.email}}" class="cnt"><i
+                            class="fi-rs-envelope"></i>{{settings.email}}</a>
                 </div>
                 <div class="single-mobile-header-info">
-                    <a href="contact.html" class="theme_btn tp_one">Контакты</a>
+                    <a href="{% url 'contact' %}" class="theme_btn tp_one">Контакты</a>
                 </div>
                 <div class="single-mobile-header-info">
-                    <a href="index.html#" class="theme_btn">Service</a>
+                    <a href="{% url 'index' %}" class="theme_btn">Service</a>
                 </div>
             </div>
 
@@ -408,7 +408,7 @@
             <div class="overlay-layer"></div>
             <div class="search-form">
                 <fieldset>
-                    <form role="search" method="get" action="#index.html">
+                    <form role="search" method="get" action="{% url 'index' %}">
                         <input type="search" class="search" placeholder="Поиск..." value="" name="s" title="Search" />
                         <button type="submit" class="sch_btn"> <i class="fi-rs-search"></i></button>
                     </form>

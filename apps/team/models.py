@@ -23,11 +23,6 @@ class Team(models.Model):
         max_length=255,
         verbose_name="О участнике команды"
     )
-    phone = models.CharField(
-        max_length=255,
-        verbose_name='номер',
-        blank=True, null=True
-    )
     facebook = models.URLField(
         verbose_name='Facebook',
         blank=True, null=True

@@ -17531,3 +17531,10 @@ input[type=range i]:focus::-webkit-slider-thumb {
   }
 }
 
+
+.logo-footer{
+  padding: 10px;
+  background: #fff;
+  max-width: 205px;
+  border-radius: 30px;
+}

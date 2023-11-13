@@ -30,7 +30,7 @@
                                         </h1>
 
                                         <div class="button_all animate_down">
-                                            <a href="index.html#" class="theme_btn color_white  animated">
+                                            <a href="{% url 'services' %}" class="theme_btn color_white  animated">
                                                 Читать</a>
                                         </div>
                                     </div>
@@ -58,7 +58,7 @@
                                         </h1>
 
                                         <div class="button_all animate_down">
-                                            <a href="index.html#" class="theme_btn color_white  animated">
+                                            <a href="{% url 'services' %}" class="theme_btn color_white  animated">
                                                 Читать</a>
                                         </div>
                                     </div>
@@ -86,8 +86,8 @@
                                         </h1>
 
                                         <div class="button_all animate_down">
-                                            <a href="index.html#" class="theme_btn color_white  animated">Read
-                                                More</a>
+                                            <a href="{% url 'services' %}" class="theme_btn color_white  animated">
+                                                Читать</a>
                                         </div>
                                     </div>
                                 </div>
@@ -202,26 +202,6 @@
                                     </div>
                                 </div>
 
-                                <div class="tab-pane  " id="mission" role="tabpanel" aria-labelledby="mission-tabtab">
-                                    <div class="tab_content_box">
-                                        <div class="content">
-                                            Знаковая часть логотипа включает в себя три пересекающиеся круга
-                                            Эйлера в разных размерах и тонах, что символизируют объединение
-                                            различных аспектов бизнеса и консалтинговых услуг. </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane  " id="vision" role="tabpanel" aria-labelledby="vision-tabtab">
-                                    <div class="tab_content_box">
-                                        <div class="content">
-                                            Обобщенная цель компании "MSBusiness" заключается в оказании
-                                            консультационных и аналитических услуг, направленных на улучшение
-                                            бизнес-показателей и развитие клиентов в СНГ и других регионах,
-                                            охватывая различные аспекты бизнеса и анализа рынка. </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                         <!---============spacing==========--->
@@ -275,13 +255,13 @@
                                         <div class="content direction_block">
                                             <div>
                                                 <div class="title_22">
-                                                    <a href="service.html">
+                                                    <a href="{% url 'services_detail' service.id %}">
                                                         {{ service.title }}</a>
                                                 </div>
                                                 <p class="trans">
                                                     {{ service.descriptions |truncatewords:15 }}</p>
                                             </div>
-                                            <a href="service.html" class="rd_more">
+                                            <a href="{% url 'services_detail' service.id %}" class="rd_more">
                                                 Читать Далее
                                                 <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -351,7 +331,7 @@
                                     </div>
                                 </div>
                                 <div class="answer accordion-content">
-                                    {{benefit.title |truncatewords:15}}
+                                    {{benefit.descriptions |truncatewords:15}}
                                 </div>
                             </div>
                             {% endfor %}
@@ -605,37 +585,37 @@
                 <div class="col-lg-7 col-md-12">
                     <div class="client_grid">
                         <div class="client_box">
-                            <a href="index.html#">
+                            <a href={% url 'projects' %}>
                                 <img src="{% static 'assets/images/MS/client-logo-8.png'%}" class="img-fluid"
                                     alt="img" />
                             </a>
                         </div>
                         <div class="client_box">
-                            <a href="index.html#">
+                            <a href="{% url 'projects' %}">
                                 <img src="{% static 'assets/images/MS/client-logo-2.png'%}" class="img-fluid"
                                     alt="img" />
                             </a>
                         </div>
                         <div class="client_box">
-                            <a href="index.html#">
+                            <a href="{% url 'projects' %}">
                                 <img src="{% static 'assets/images/MS/client-logo-3.png'%}" class="img-fluid"
                                     alt="img" />
                             </a>
                         </div>
                         <div class="client_box">
-                            <a href="index.html#">
+                            <a href="{% url 'projects' %}">
                                 <img src="{% static 'assets/images/MS/client-logo-7.svg'%}" class="img-fluid"
                                     alt="img" />
                             </a>
                         </div>
                         <div class="client_box last">
-                            <a href="index.html#">
+                            <a href="{% url 'projects' %}">
                                 <img src="{% static 'assets/images/MS/client-logo-5.png'%}" class="img-fluid"
                                     alt="img" />
                             </a>
                         </div>
                         <div class="client_box last">
-                            <a href="index.html#">
+                            <a href="{% url 'projects' %}">
                                 <img src="{% static 'assets/images/MS/client-logo-6.png'%}" class="img-fluid"
                                     alt="img" />
                             </a>
