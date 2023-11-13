@@ -2232,7 +2232,6 @@ pre {
   transition: all 1000ms ease;
   z-index: 10;
   width: 80%;
-  word-break: break-all;
 }
 
 .owl-item.active .animate_left {
