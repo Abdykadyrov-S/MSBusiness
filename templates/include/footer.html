@@ -370,10 +370,6 @@
         <div class="menu-backdrop"></div>
         <nav class="menu-box scrollbarcolor">
             <div class="close-btn"><i class="fi-rr-cross"></i></div>
-            <form role="search" method="get" action="{% url 'index' %}">
-                <input type="search" class="search" placeholder="Поиск..." value="" name="s" title="Search" />
-                <button type="submit" class="sch_btn"> <i class="fa fa-search"></i></button>
-            </form>
             <div class="menu-outer">
                 <div class="navigation_menu">
                     <ul class="navbar_nav getmobilemenu">
@@ -394,26 +390,10 @@
                     <a href="{% url 'contact' %}" class="theme_btn tp_one">Контакты</a>
                 </div>
                 <div class="single-mobile-header-info">
-                    <a href="{% url 'index' %}" class="theme_btn">Service</a>
+                    <a href="{% url 'services' %}" class="theme_btn">Наши услуги</a>
                 </div>
             </div>
 
         </nav>
     </div>
     <!----==============mobile_menu_box end==============--->
-    <!----==============search-popup==============--->
-    <div class="search-popup">
-        <div class="close-search zoom-in-zoom-out"><i class="fa fa-times"></i></div>
-        <div class="popup-inner">
-            <div class="overlay-layer"></div>
-            <div class="search-form">
-                <fieldset>
-                    <form role="search" method="get" action="{% url 'index' %}">
-                        <input type="search" class="search" placeholder="Поиск..." value="" name="s" title="Search" />
-                        <button type="submit" class="sch_btn"> <i class="fi-rs-search"></i></button>
-                    </form>
-                </fieldset>
-            </div>
-        </div>
-    </div>
-    <!----==============search-popup end==============--->
