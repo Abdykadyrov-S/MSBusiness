@@ -151,7 +151,7 @@
                                 <div class="col-lg-8 col-md-12">
                                     <section class="contact_form_box_all">
                                         <div class="contact_form_shortcode">
-                                            <form method="post">
+                                            <form method="post" id="contact-form">
                                                 {% csrf_token %}
                                                 <div class="messages"></div>
                                                 <div class="controls">
@@ -181,12 +181,31 @@
                                                         </div>
                                                         <div class="col-sm-12">
                                                             <div class="form-group mg_top apbtn">
+                                                                <!-- Добавление reCAPTCHA -->
+                                                                <div class="g-recaptcha" data-sitekey="6LclihUpAAAAAIU33DGmECF2oBshehtjIkHm-RtZ"></div>
                                                                 <button class="theme_btn" type="submit">Отправить</button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </form>
+                                            <!-- Подключение скрипта reCAPTCHA -->
+                                            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                                            <script>
+                                                document.addEventListener('DOMContentLoaded', function () {
+                                                    var form = document.getElementById('contact-form');
+                                            
+                                                    form.addEventListener('submit', function (event) {
+                                                        var recaptchaResponse = grecaptcha.getResponse();
+                                            
+                                                        if (!recaptchaResponse) {
+                                                            event.preventDefault();
+                                                            alert('Пожалуйста, пройдите проверку reCAPTCHA.');
+                                                            // Дополнительные действия, если необходимо
+                                                        }
+                                                    });
+                                                });
+                                            </script>
                                          </div>
                                     </section>
                                 </div>
